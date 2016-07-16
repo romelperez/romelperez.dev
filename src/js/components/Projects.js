@@ -3,6 +3,7 @@ import ReactCSSTransitionGroup from 'react-addons-css-transition-group';
 import { Motion, spring, StaggeredMotion, presets } from 'react-motion';
 import _ from 'lodash';
 import { Card, Selector } from 'prhone-gui';
+import constants from '../constants.js';
 import store from '../store.js';
 import sound from '../utils/sound.js';
 
@@ -38,7 +39,7 @@ const Projects = React.createClass({
 
   componentDidMount () {
     $('.rp-projects-header .pr-box').on('mouseenter', e => {
-      sound.play('over', {volume: 0.25});
+      sound.play('over', {volume: constants.volumeMinor});
     });
   },
 
@@ -65,7 +66,7 @@ const Projects = React.createClass({
       </div>
     );
 
-    const onMouseEnter = e => sound.play('over', {volume: 0.25});
+    const onMouseEnter = e => sound.play('over', {volume: constants.volumeMinor});
 
     return (
       <div key={project.id} style={setStyles} onMouseEnter={onMouseEnter}>

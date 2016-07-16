@@ -20,7 +20,6 @@ export default function (state, action) {
     return fromJS({
       status: '',
       loaded: false,
-      volume: 0.5,
       user: userData,
       projects: projectsData,
       projectTypes

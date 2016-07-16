@@ -3,6 +3,8 @@ import userData from 'data/user.js';
 export default {
   ga: 'UA-50433259-1',
   animTime: 400,
+  volume: 0.5,
+  volumeMinor: 0.1,
   resources: [{
     src: userData.profile,
     type: createjs.AbstractLoader.IMAGE

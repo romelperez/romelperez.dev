@@ -1,5 +1,6 @@
 import React from 'react';
 import { Img, Btn } from 'prhone-gui';
+import constants from '../constants.js';
 import store from '../store.js';
 import sound from '../utils/sound.js';
 
@@ -7,7 +8,7 @@ const Header = React.createClass({
 
   componentDidMount () {
     $('.rp-header .pr-box').on('mouseenter', e => {
-      sound.play('over', {volume: 0.25});
+      sound.play('over', {volume: constants.volumeMinor});
     });
   },
 
