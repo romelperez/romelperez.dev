@@ -6,7 +6,9 @@
   "license": "GNUv3",
   "private": true,
   "dependencies": {
-    "express": "^4.14.0",
+    "express": "^4.14.0"
+  },
+  "devDependencies": {
     "foundation-sites": "^6.2.3",
     "immutable": "^3.8.1",
     "lodash": "^4.13.1",
@@ -17,9 +19,7 @@
     "react-dom": "^15.1.0",
     "react-motion": "^0.4.4",
     "react-redux": "^4.4.5",
-    "redux": "^3.5.2"
-  },
-  "devDependencies": {
+    "redux": "^3.5.2",
     "autoprefixer": "^6.3.7",
     "babel-core": "^6.9.1",
     "babel-loader": "^6.2.4",
@@ -38,6 +38,7 @@
   },
   "main": "server.js",
   "scripts": {
+    "start": "pm2 start server.js",
     "build": "npm run build-sass && npm run build-js",
     "build-sass": "gulp sass",
     "build-js": "webpack",
