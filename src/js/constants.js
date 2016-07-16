@@ -1,7 +1,7 @@
 import userData from 'data/user.js';
 
 export default {
-  ga: '',
+  ga: 'UA-50433259-1',
   animTime: 400,
   resources: [{
     src: userData.profile,
