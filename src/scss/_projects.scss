@@ -1,0 +1,39 @@
+.rp-projects {
+
+  .rp-projects-header {
+    &.rp-projects-header_anim {
+      animation: anim-projects-header #{$pr-animation-time}ms ease-out;
+    }
+  }
+  .rp-selector {
+    text-align: right;
+
+    .pr-selector {
+      margin: 0;
+      min-width: 100px;
+    }
+  }
+  .pr-card__info {
+    font-size: 90%;
+    user-select: none;
+  }
+
+  @include breakpoint(small down) {
+    .pr-card {
+      .pr-card__title {
+        line-height: 1.5;
+      }
+    }
+  }
+}
+
+@keyframes anim-projects-header {
+  from {
+    opacity: 0;
+    transform: translate(0, 25px);
+  }
+  to {
+    opacity: 1;
+    transform: translate(0, 0);
+  }
+}

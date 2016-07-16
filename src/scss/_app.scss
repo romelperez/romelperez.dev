@@ -1,0 +1,20 @@
+.rp-body-loading {
+  position: fixed;
+  overflow-y: scroll;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+}
+
+.row {
+  max-width: 800px;
+}
+
+.pr-separator {
+  &.pr-separator_anim {
+    .pr-separator__gear {
+      animation: pr-anim-separator #{$pr-animation-time*2}ms ease-out;
+    }
+  }
+}

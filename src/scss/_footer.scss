@@ -1,0 +1,13 @@
+.rp-footer {
+  margin-bottom: 10px;
+
+  .column:last-child {
+    text-align: right;
+  }
+
+  @include breakpoint(small down) {
+    .column:last-child {
+      text-align: left;
+    }
+  }
+}

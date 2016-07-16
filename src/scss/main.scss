@@ -1,0 +1,8 @@
+@import 'gui';
+
+@include pr-all;
+
+@import './app';
+@import './header';
+@import './projects';
+@import './footer';

@@ -1,0 +1,94 @@
+.rp-header {
+  padding: 20px 0;
+  background-color: #052524;
+
+  h1 {
+    display: inline-block;
+    margin: 0;
+    font-size: 2.5rem;
+  }
+  p {
+    margin: 0 0 10px;
+
+    a {
+      color: $pr-color1;
+
+      &:hover,
+      &:focus,
+      &:active {
+        color: $pr-color3-active;
+      }
+    }
+  }
+  .row + .row {
+    margin-top: 5px;
+  }
+  .pr-img {
+    display: block;
+    float: right;
+    margin: 0 0 10px 20px;
+    width: 211px;
+    height: 150px;
+  }
+  .pr-btn {
+    margin: 0 10px 10px 0;
+  }
+
+  &.rp-header_loaded {
+    animation: anim-header #{$pr-animation-time*2}ms ease-out;
+  }
+
+  @include breakpoint(medium only) {
+    .pr-btn {
+      margin-right: 8px;
+    }
+  }
+
+  @include breakpoint(767px down) {
+    .pr-img {
+      width: 150px;
+      height: 150px;
+    }
+    .pr-btn {
+      margin: 0 10px 10px 0;
+    }
+  }
+
+  @include breakpoint(small down) {
+    padding: 10px 0;
+  }
+
+  @include breakpoint(450px down) {
+    p {
+      a {
+        display: block;
+      }
+    }
+  }
+
+  @include breakpoint(360px down) {
+    .pr-img {
+      float: none;
+      margin: 0 0 10px 0;
+      width: 200px;
+      height: 200px;
+    }
+  }
+}
+
+@keyframes anim-header {
+  from {
+    opacity: 0;
+    background-color: rgba(0,0,0,0);
+    transform: translate(0, -100px);
+  }
+  50% {
+    opacity: 0.25;
+    background-color: rgba(0,0,0,0);
+  }
+  to {
+    opacity: 1;
+    background-color: #052524;
+    transform: translate(0, 0);
+  }
+}
