@@ -83,7 +83,7 @@ const Projects = React.createClass({
     const state = store.getState().toJS();
     const list = state.projects.reverse();
     const types = state.projectTypes;
-    const range = list.length === 0 ? 0 : list.length-1;
+    const range = list.length === 0 ? 0 : list.length;
     const headerAnim = state.loaded ? 'rp-projects-header_anim' : '';
     const cards = (
       state.loaded ? (

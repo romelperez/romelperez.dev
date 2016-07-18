@@ -7,3 +7,5 @@ store.subscribe(render);
 render();
 
 ga();
+
+window.app = { version: '1.0.1' };
