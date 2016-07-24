@@ -1,6 +1,12 @@
 /* humanstxt.org */
 
 /* SITE */
-  Standards: HTML5, CSS3, ES2015
-  Components: SASS, jQuery, Underscore, Backbone
-  Software: Git, Atom
+  Standards: HTML5, CSS3, SASS, ES2015, JSX
+  Components: React, Zepto, Createjs
+  Software: Linux, Git, Atom
+
+/* TEAM */
+  Romel Perez
+  ronelprhone@gmail.com
+  @romelperez07
+  Colombia
