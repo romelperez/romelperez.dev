@@ -1,12 +1,13 @@
 {
   "name": "romelperez",
-  "version": "1.0.1",
+  "version": "1.1.0",
   "description": "Romel Pérez personal website",
   "author": "Romel Pérez (romelperez.com)",
   "license": "GNUv3",
   "private": true,
   "dependencies": {
-    "express": "^4.14.0"
+    "express": "^4.14.0",
+    "nunjucks": "^2.4.2"
   },
   "devDependencies": {
     "foundation-sites": "^6.2.3",
@@ -41,7 +42,7 @@
     "start": "pm2 start server.js",
     "build": "npm run build-sass && npm run build-js",
     "build-sass": "gulp sass",
-    "build-js": "webpack",
+    "build-js": "gulp webpack",
     "test": "karma start karma.conf.js"
   }
 }
