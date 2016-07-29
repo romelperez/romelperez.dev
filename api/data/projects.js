@@ -142,4 +142,13 @@ module.exports = [{
   type: 0,
   weight: 3,
   link: 'https://github.com/romelperez/prhone-gui'
+}, {
+  id: 16,
+  name: 'Introducción a Polymer',
+  description: 'Una introducción a la librería Polymer para crear web components de Google, junto con ejemplos sencillos explicando sus rasgos importantes y uso para crear páginas y aplicaciones web.',
+  date: '2016-07-29',
+  lang: 'es',
+  type: 2,
+  weight: 2,
+  link: '/charlas/polymer'
 }];
