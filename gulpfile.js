@@ -1,70 +1,84 @@
 const fs =           require('fs');
+const extend =       require('extend');
 const sass =         require('node-sass');
 const gulp =         require('gulp');
 const rename =       require('gulp-rename');
 const concat =       require('gulp-concat');
 const gutil =        require('gulp-util');
-const webpack =      require('gulp-webpack');
+const shell =        require('gulp-shell');
 const livereload =   require('gulp-livereload');
 const postcss =      require('gulp-postcss');
 const autoprefixer = require('autoprefixer');
 const cssnano =      require('cssnano');
 
-const webpackConfig =require('./webpack.config.js');
+//
+// SETTINGS
+//
+const sassFiles = [{
+  file: 'src/scss/core/core.scss',
+  outFile: 'assets/css/core.css'
+}, {
+  file: 'src/scss/index/index.scss',
+  outFile: 'assets/css/index.css'
+}];
+const webpackConfig = require('./webpack.config.js');
 
+//
+// SASS
+//
 gulp.task('sass-bundle', function () {
-
-  const result = sass.renderSync({
-    file: './src/scss/main.scss',
-    outFile: './assets/css/app.css',
-    includePaths: [
-      './node_modules/foundation-sites/scss',
-      './node_modules/prhone-gui/src/scss'
-    ]
+  sassFiles.forEach(file => {
+    const result = sass.renderSync(extend({}, file, {
+      includePaths: [
+        './node_modules/foundation-sites/scss',
+        './node_modules/prhone-gui/src/scss'
+      ]
+    }));
+    fs.writeFileSync(__dirname +'/'+ file.outFile, result.css);
   });
-  fs.writeFileSync(__dirname +'/assets/css/app.css', result.css);
-
-  return gulp.src([
-    './node_modules/normalize.css/normalize.css',
-    './assets/css/app.css'
-  ]).
-    pipe(concat('app.css')).
-    pipe(gulp.dest('./assets/css'));
 });
 
 gulp.task('sass', ['sass-bundle'], function () {
-  return gulp.src(['./assets/css/app.css']).
-    pipe(postcss([
-      autoprefixer({browsers: [
-        'last 5 version',
-        '> 5%'
-      ]}),
-      cssnano(),
-    ])).
-    pipe(rename({
-      dirname: ''
-    })).
-    pipe(gulp.dest('./assets/css')).
-    pipe(livereload());
+  sassFiles.forEach(file => {
+    gulp.src([file.outFile]).
+      pipe(postcss([
+        autoprefixer({browsers: [
+          'last 5 version',
+          '> 5%'
+        ]}),
+        cssnano(),
+      ])).
+      pipe(rename({
+        dirname: ''
+      })).
+      pipe(gulp.dest('./assets/css')).
+      pipe(livereload());
+  });
 });
 
-gulp.task('webpack-bundle', function () {
-  return gulp.src('./src/js/main.js').
-    pipe(webpack(webpackConfig)).
-    pipe(gulp.dest('.'));
-});
+//
+// WEBPACK
+//
+gulp.task('webpack-bundle', shell.task([
+  'webpack'
+]));
 
-gulp.task('webpack', ['webpack-bundle'], function () {
+gulp.task('webpack-core', ['webpack-bundle'], function () {
   return gulp.src([
-    './lib/zepto.min.js',
-    './lib/preloadjs-NEXT.min.js',
-    './lib/soundjs-NEXT.min.js',
-    './assets/js/app.js'
+    './lib/js/zepto.min.js',
+    './lib/js/preloadjs-NEXT.min.js',
+    './lib/js/soundjs-NEXT.min.js',
+    './assets/js/core.js'
   ]).
-    pipe(concat('app.js')).
+    pipe(concat('core.js')).
     pipe(gulp.dest('./assets/js'));
 });
 
+gulp.task('webpack', ['webpack-bundle', 'webpack-core']);
+
+//
+// WATCH
+//
 gulp.task('watch', function () {
   livereload.listen();
   gulp.watch([
