@@ -2,9 +2,13 @@ const path = require('path');
 const webpack = require('webpack');
 
 module.exports = {
-  entry: './src/js/main.js',
+  entry: {
+    core: './src/js/core/core.js',
+    index: './src/js/index/index.js'
+  },
   output: {
-    filename: './assets/js/app.js'
+    path: './assets/js/',
+    filename: '[name].js'
   },
   resolve: {
     root: path.resolve(__dirname),
