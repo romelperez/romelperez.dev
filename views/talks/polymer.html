@@ -1,0 +1,257 @@
+<!DOCTYPE HTML>
+<html lang="es">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+		<meta name="description" content="PRESENTATION DESCRIPTION">
+		<meta name="author" content="Romel Pérez">
+    <title>Introducción a Polymer | Romel Pérez</title>
+
+    <link rel="stylesheet" href="/css/core.css">
+		<link rel="stylesheet" href="/css/reveal/reveal.css">
+		<link rel="stylesheet" href="/css/reveal/theme.css" id="theme">
+    <script src="/js/reveal/links-deps.js"></script>
+
+    <style>
+      .s-content p {
+        background-color: rgba(0,0,0,0.85);
+      }
+      .s-link a {
+        padding: 20px;
+        background-color: rgba(0,0,0,0.6);
+      }
+    </style>
+	</head>
+	<body>
+
+		<div class="reveal">
+			<div class="slides">
+
+        <section>
+          <img src="/img/talks/polymer/polymer.png">
+          <h1>Introducción a Polymer</h1>
+          <p>Crea componentes web para tus páginas y aplicaciones web con la librería <a href="http://polymer-project.org" target="polymer">Polymer</a> de Google</p>
+        </section>
+
+        <section class="s-content" data-background="/img/talks/polymer/ui-kit.png">
+          <h2>Polymer Library</h2>
+          <p>Polymer es una librería que te permite sacar el máximo provecho a la plataforma web a través de <a href="http://webcomponents.org/" target="webcomponents"><b>web components</b></a>.</p>
+          <p>Esto se logra extendiendo el mismo HTML para modularizar nuestras aplicaciones web.</p>
+        </section>
+
+        <section>
+          <img src="/img/talks/polymer/webcomponents.svg">
+          <h2>Web Components?</h2>
+          <p>Los <a href="http://webcomponents.org/" target="webcomponents">web components</a> son una especificación agregada al HTML y el <a href="https://es.wikipedia.org/wiki/Document_Object_Model" target="_blank">DOM</a> para permitir crear widgets o componentes reusables, encapsulables e interpolables para páginas o aplicaciones web.</p>
+        </section>
+
+        <section>
+          <img src="/img/talks/polymer/webcomponents.svg">
+          <h2>Web Components</h2>
+          <ul>
+            <li><b>Custom Elements</b>: Una API para definir nuevos elementos HTML</li>
+            <li><b>Shadow DOM</b>: Encapsulación de DOM y estilos</li>
+            <li><b>HTML Templates</b>: Delcaración de plantillas o partes HTML</li>
+            <li><b>HTML Imports</b>: Una manera declarativa de importar documentos HTML dentro de otros</li>
+          </ul>
+        </section>
+
+        <section>
+          <img src="/img/talks/polymer/webcomponents.svg">
+          <h2>Soporte y polyfills</h2>
+          <p>Los web components son soportados en la mayoría de los navegadores actuales pero para asegurar su funcionamiento es recomendado instalar los polyfills.</p>
+          <div>
+            <img src="/img/talks/polymer/chrome.png">
+            <img src="/img/talks/polymer/firefox.png">
+            <img src="/img/talks/polymer/ie.png">
+            <img src="/img/talks/polymer/edge.png">
+            <img src="/img/talks/polymer/safari.png">
+            <img src="/img/talks/polymer/opera.png">
+          </div>
+        </section>
+
+        <section>
+          <h2>Descargar</h2>
+          <p>Se recomienda usar <a href="http://bower.io" target="_blank">bower</a> (el cual requiere de <a href="http://nodejs.org" target="_blank">node.js</a>):</p>
+          <pre><code class="hlbash" data-trim>
+$ bower install polymer
+          </code></pre>
+          <p>Polymer require de los <a href="https://github.com/webcomponents/webcomponentsjs" target="_blank">web components polyfills</a>, el cual se instala al instalarse Polymer:</p>
+          <pre><code class="hlbash" data-trim>
+$ bower install webcomponentsjs
+          </code></pre>
+          <p>También puedes descargarlo directamente desde <a href="https://github.com/Polymer/polymer" target="_blank">el repositorio</a>.</p>
+        </section>
+
+        <section>
+          <h2>Instalación</h2>
+          <p>En la página donde quieras instalarlo, dentro de la etiqueta <code>&lt;head&gt;</code>:</p>
+          <pre><code class="hlhtml" data-trim>
+&lt;!-- Polyfills para navegadores antiguos --&gt;
+&lt;script src="./bower_components/webcomponentsjs/webcomponents-lite.min.js"&gt;&lt;/script&gt;
+&lt;!-- Librería Polymer --&gt;
+&lt;link rel="import" href="./bower_components/polymer/polymer.html"&gt;
+          </code></pre>
+        </section>
+
+        <section>
+          <h2>Nuestro primer componente</h2>
+          <p>Crea un archivo HTML en la misma carpeta que se llame <code>app-user.html</code> y dentro:</p>
+          <pre><code class="hlhtml" data-trim>
+&lt;link rel="import" href="./bower_components/polymer/polymer.html"&gt;
+
+&lt;dom-module id="app-user"&gt;
+  &lt;template&gt;
+    &lt;span&gt;Usuario:&lt;/span&gt;
+    &lt;strong&gt;
+      &lt;content&gt;&lt;/content&gt;
+    &lt;/strong&gt;
+  &lt;/template&gt;
+
+  &lt;script&gt;
+    Polymer({
+      is: 'app-user'
+    });
+  &lt;/script&gt;
+&lt;/dom-module&gt;
+          </code></pre>
+        </section>
+
+        <section>
+          <h2>Nuestro primer componente</h2>
+          <p>En nuestra página HTML importamos nuestro componente:</p>
+          <pre><code class="hlhtml" data-trim>
+&lt;link rel="import" href="./app-user.html"&gt;
+          </code></pre>
+          <p>Y lo utilizamos como una etiqueta HTML:</p>
+          <pre><code class="hlhtml" data-trim>
+&lt;app-user&gt;María Pérez&lt;/app-user&gt;
+          </code></pre>
+          <p>Resultando:</p>
+          <img src="/img/talks/polymer/example1.png">
+        </section>
+
+        <section>
+          <h2>Nuestro primer componente</h2>
+          <p>Ahora demosle estilo:</p>
+          <pre><code class="hlhtml" data-trim>
+&lt;template&gt;
+  &lt;style&gt;
+    :host {  /* El mismo elemento */
+      display: block;
+      margin: 0 0 1rem;
+    }
+    span {  /* Elementos dentro del local DOM */
+      font-style: italic;
+      color: blue;
+    }
+    :host ::content u {  /* Elementos contenidos */
+      color: red;
+    }
+  &lt;/style&gt;
+  &lt;span&gt;Usuario:&lt;/span&gt;
+  &lt;strong&gt;
+    &lt;content&gt;&lt;/content&gt;
+  &lt;/strong&gt;
+&lt;/template&gt;
+          </code></pre>
+        </section>
+
+        <section>
+          <h2>Nuestro primer componente</h2>
+          <p>Utilizando el elemento con nuevos estilos:</p>
+          <pre><code class="hlhtml" data-trim>
+&lt;app-user&gt;
+  La asombrosa &lt;u&gt;María Pérez&lt;/u&gt;
+&lt;/app-user&gt;
+          </code></pre>
+          <p>Resultando:</p>
+          <img src="/img/talks/polymer/example2.png">
+        </section>
+
+        <section>
+          <h2>Nuestro primer componente</h2>
+          <p>Ahora vamos a definirle propiedades del elemento:</p>
+          <pre><code class="hlhtml" data-trim>
+&lt;script&gt;
+  Polymer({
+    is: 'app-user',
+    properties: {
+      // Nótese que los atributos con dashes (-) se convierten
+      // en camelCase (profile-img -> profileImg)
+      profileImg: String,
+      job: {
+        type: String,
+        value: 'Deportista'  // Valor por defecto
+      }
+    }
+  });
+&lt;/script&gt;
+          </code></pre>
+        </section>
+
+        <section>
+          <h2>Nuestro primer componente</h2>
+          <p>Y definamos cómo utilizaremos esas propiedades:</p>
+          <pre><code class="hlhtml" data-trim>
+&lt;template&gt;
+  &lt;style&gt;
+    /* ...estilos... */
+  &lt;/style&gt;
+  &lt;img src$="&#123;&#123;profileImg&#125;&#125;" alt="Foto de perfíl"&gt;
+  &lt;br&gt;
+  &lt;strong&gt;
+    &lt;content&gt;&lt;/content&gt;
+  &lt;/strong&gt;
+  &lt;br&gt;
+  &lt;small&gt;&#123;&#123;job&#125;&#125;&lt;/small&gt;
+&lt;/template&gt;
+          </code></pre>
+        </section>
+
+        <section>
+          <h2>Nuestro primer componente</h2>
+          <p>Utilizando el elemento con propiedades para configurar:</p>
+          <pre><code class="hlhtml" data-trim>
+&lt;app-user profile-img="user1.jpg" job="Diseñadora"&gt;
+  María Pérez
+&lt;/app-user&gt;
+          </code></pre>
+          <p>Suponiendo que tenemos la siguiente imagen llamada <code>user1.jpg</code>, resultaría:</p>
+          <img src="/img/talks/polymer/example3-res1.jpg">
+          <img src="/img/talks/polymer/example3.png">
+        </section>
+
+        <section data-background="/img/talks/polymer/gif-new.gif">
+          <h3>Wao, Polymer es asombroso!</h3>
+        </section>
+
+        <section class="s-link" data-background="/img/talks/polymer/catalog.png">
+          <h3><a href="https://elements.polymer-project.org/" target="_blank">Polymer Catalog</a></h3>
+        </section>
+
+        <section class="s-link" data-background="/img/talks/polymer/google-music.png">
+          <h3><a href="https://github.com/Polymer/polymer/wiki/Who's-using-Polymer%3F" target="_blank">Quién está usando Polymer?</a></h3>
+        </section>
+
+        <section class="s-link" data-background="/img/talks/polymer/gif-examples.gif">
+          <h3><a href="https://github.com/BucaramangaJS/polymer-ejemplos" target="_blank">Quiero ver ejemplos paso a paso!</a></h3>
+        </section>
+
+        <section>
+          <p>Creado por <a href="/">Romel Pérez</a>.</p>
+        </section>
+
+			</div>
+		</div>
+
+    <script src="/js/core.js"></script>
+		<script src="/js/reveal/head.min.js"></script>
+		<script src="/js/reveal/reveal.js"></script>
+		<script src="/js/reveal/initialize.js"></script>
+	</body>
+</html>
