@@ -1,8 +1,6 @@
 @import 'gui';
 
-@include pr-all;
-
-@import './app';
+@import './main';
 @import './header';
 @import './projects';
 @import './footer';

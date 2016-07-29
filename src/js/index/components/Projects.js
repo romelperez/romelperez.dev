@@ -1,11 +1,9 @@
-import React from 'react';
 import ReactCSSTransitionGroup from 'react-addons-css-transition-group';
 import { Motion, spring, StaggeredMotion, presets } from 'react-motion';
-import _ from 'lodash';
 import { Card, Selector } from 'prhone-gui';
-import constants from '../constants.js';
+import constants from '../../constants.js';
+import sound from '../../utils/sound.js';
 import store from '../store.js';
-import sound from '../utils/sound.js';
 
 const Projects = React.createClass({
 
@@ -67,10 +65,11 @@ const Projects = React.createClass({
     );
 
     const onMouseEnter = e => sound.play('over', {volume: constants.volumeMinor});
+    const target = /^\/.+/.test(project.link) ? null : '_blank';
 
     return (
       <div key={project.id} style={setStyles} onMouseEnter={onMouseEnter}>
-        <Card title={project.name} href={project.link} target='_blank'
+        <Card title={project.name} href={project.link} target={target}
         info={info} lang={project.lang === 'en' ? null : project.lang}>
           <p>{project.description}</p>
         </Card>
@@ -81,12 +80,15 @@ const Projects = React.createClass({
   render () {
 
     const state = store.getState().toJS();
+    const globalState = RP.store.getState().toJS();
+
     const list = state.projects.reverse();
     const types = state.projectTypes;
     const range = list.length === 0 ? 0 : list.length;
-    const headerAnim = state.loaded ? 'rp-projects-header_anim' : '';
+    const headerAnim = globalState.loaded ? 'rp-projects-header_anim' : '';
+
     const cards = (
-      state.loaded ? (
+      globalState.loaded ? (
         <StaggeredMotion defaultStyles={this.getInitialStyles(range)} styles={this.getStyles}>
           {interpolatingStyles =>
             <div>

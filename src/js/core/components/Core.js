@@ -1,13 +1,11 @@
 import React from 'react';
-import { Loading, Separator } from 'prhone-gui';
-import constants from '../constants.js';
+import _ from 'lodash';
+import { Loading } from 'prhone-gui';
+import constants from '../../constants.js';
+import sound from '../../utils/sound';
 import store from '../store.js';
-import sound from '../utils/sound';
-import Header from './Header';
-import Projects from './Projects';
-import Footer from './Footer';
 
-const App = React.createClass({
+const Core = React.createClass({
 
   componentDidMount () {
 
@@ -25,13 +23,7 @@ const App = React.createClass({
     const loaded = state.get('loaded');
     const status = state.get('status');
     return (
-      <div>
-        <Loading done={loaded} status={status} />
-        <Header />
-        <Separator anim={loaded} />
-        <Projects />
-        <Footer />
-      </div>
+      <Loading done={loaded} status={status} />
     );
   },
 
@@ -39,14 +31,19 @@ const App = React.createClass({
 
     store.dispatch({ type: 'STATUS', status: 'success' });
 
-    setTimeout(() => {
-      document.querySelector('body').className = '';
-      store.dispatch({ type: 'LOAD', loaded: true });
-      sound.play('started');
-    }, constants.animTime);
+    document.querySelector('body').className = '';
+    store.dispatch({ type: 'LOAD', loaded: true });
+    sound.play('started');
   },
 
   loadResources () {
+
+    setTimeout(() => {
+      const loaded = store.getState().get('loaded');
+      if (!loaded) {
+        this.onResourcesComplete();
+      }
+    }, 5000);
 
     this._queue = new createjs.LoadQueue();
     this._queue.installPlugin(createjs.Sound);
@@ -77,4 +74,4 @@ const App = React.createClass({
   }
 });
 
-export default App;
+export default Core;

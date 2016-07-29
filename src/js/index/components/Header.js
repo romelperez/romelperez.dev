@@ -1,8 +1,7 @@
-import React from 'react';
 import { Img, Btn } from 'prhone-gui';
-import constants from '../constants.js';
+import constants from '../../constants.js';
+import sound from '../../utils/sound.js';
 import store from '../store.js';
-import sound from '../utils/sound.js';
 
 const Header = React.createClass({
 
@@ -15,11 +14,15 @@ const Header = React.createClass({
   render () {
 
     const state = store.getState().toJS();
-    const loadedCls = state.loaded ? 'rp-header_loaded' : '';
+    const globalState = RP.store.getState().toJS();
+
+    const loadedCls = globalState.loaded ? 'rp-header_loaded' : '';
     const cls = `rp-header ${loadedCls}`;
     const user = state.user;
     const links = user.links.map((link, i) => {
-      return <Btn key={i} icon={link.icon} href={link.href} target='_blank'>{link.name}</Btn>;
+      return (
+        <Btn key={i} icon={link.icon} href={link.href} target='_blank'>{link.name}</Btn>
+      );
     });
 
     return (
@@ -27,7 +30,7 @@ const Header = React.createClass({
         <div className='row'>
           <div className='column small-12'>
             <h1>{user.name}</h1>
-            <Img src={user.profile} anim={state.loaded} />
+            <Img src={user.profile} anim={globalState.loaded} />
             <p>{user.bio}</p>
             <p>
               {

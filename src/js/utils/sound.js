@@ -1,4 +1,3 @@
-import _ from 'lodash';
 import constants from '../constants.js';
 
 export default {
