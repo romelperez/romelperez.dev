@@ -25,11 +25,11 @@ module.exports = {
     href: 'https://www.linkedin.com/in/romelperez/en'
   }],
   location: {
-    name: 'Colombia, Bucaramanga',
+    name: 'Bucaramanga',
     map: 'https://www.google.com.co/maps/place/Bucaramanga,+Santander+Department'
   },
   company: {
-    name: '',
-    href: ''
+    name: 'Vulcan Estudios',
+    href: 'http://vulcanst.co'
   }
 };
