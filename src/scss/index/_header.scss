@@ -58,7 +58,7 @@
     padding: 10px 0;
   }
 
-  @include breakpoint(450px down) {
+  @include breakpoint(500px down) {
     p {
       a {
         display: block;
