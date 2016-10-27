@@ -5,7 +5,7 @@ module.exports = [{
 }, {
   id: 1,
   icon: 'file-document-box',
-  name: 'Doc'
+  name: 'Guide'
 }, {
   id: 2,
   icon: 'account-multiple',

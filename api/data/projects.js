@@ -151,4 +151,22 @@ module.exports = [{
   type: 2,
   weight: 2,
   link: '/charlas/polymer'
+}, {
+  id: 17,
+  name: 'Introducción a JavaScript ES2015',
+  description: 'Introducción a los features de JavaScript en su versión ES2015 usando como ejemplo el transpilador de Babel en Node.js con Babel CLI y en el navegador con el module bundler Webpack.',
+  date: '2016-10-25',
+  lang: 'es',
+  type: 1,
+  weight: 1,
+  link: 'https://www.youtube.com/watch?v=03UkQmxJQcE'
+}, {
+  id: 18,
+  name: 'Introducción a Vagrant',
+  description: 'Introducción a la herramienta Vagrant, la cual nos permite crear y trabajar en ambientes de desarrollo modularizados, configurables y livianos en diferentes entornos operativos. Se hacen pruebas con un ambiente Linux Ubuntu/Xenial.',
+  date: '2016-10-26',
+  lang: 'es',
+  type: 1,
+  weight: 1,
+  link: 'https://www.youtube.com/watch?v=CONv9eCNuNY'
 }];
