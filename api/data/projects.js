@@ -158,7 +158,7 @@ module.exports = [{
   date: '2016-10-25',
   lang: 'es',
   type: 1,
-  weight: 1,
+  weight: 3,
   link: 'https://www.youtube.com/watch?v=03UkQmxJQcE'
 }, {
   id: 18,
@@ -167,6 +167,6 @@ module.exports = [{
   date: '2016-10-26',
   lang: 'es',
   type: 1,
-  weight: 1,
+  weight: 3,
   link: 'https://www.youtube.com/watch?v=CONv9eCNuNY'
 }];
