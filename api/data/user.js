@@ -1,6 +1,6 @@
 module.exports = {
   name: 'Romel Pérez',
-  bio: 'Enthusiastic software engineering student. JavaScript dev, Sci-Fi and anime fan. Making the world a better place through lines of code.',
+  bio: 'Software engineering autodidact. Enthusiast, JavaScript dev, Sci-Fi and anime fan. Making the world a better place through lines of code.',
   profile: '/img/profile.jpg',
   mail: 'ronelprhone@gmail.com',
   links: [{

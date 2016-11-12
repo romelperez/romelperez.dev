@@ -169,4 +169,13 @@ module.exports = [{
   type: 1,
   weight: 3,
   link: 'https://www.youtube.com/watch?v=CONv9eCNuNY'
+}, {
+  id: 19,
+  name: 'Introducción a Testing de Web Apps',
+  description: 'Una introducción general a software testing orientada a aplicaciones web basadas en JavaScript con ejemplos de implementación.',
+  date: '2016-11-12',
+  lang: 'es',
+  type: 1,
+  weight: 2,
+  link: 'https://github.com/vulcan-estudios/web-testing'
 }];
