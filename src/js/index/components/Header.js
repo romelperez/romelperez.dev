@@ -28,7 +28,7 @@ const Header = React.createClass({
     return (
       <header className={cls}>
         <div className='row'>
-          <div className='column small-12'>
+          <div className='rp-header__content column small-12'>
             <h1>{user.name}</h1>
             <Img src={user.profile} anim={globalState.loaded} />
             <p>{user.bio}</p>

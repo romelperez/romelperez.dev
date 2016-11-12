@@ -23,12 +23,15 @@
   .row + .row {
     margin-top: 5px;
   }
+  .rp-header__content {
+    height: 172px;
+  }
   .pr-img {
     display: block;
     float: right;
     margin: 0 0 10px 20px;
     width: 211px;
-    height: 150px;
+    //height: 150px;
   }
   .pr-btn {
     margin: 0 10px 10px 0;
@@ -44,7 +47,10 @@
     }
   }
 
-  @include breakpoint(767px down) {
+  @include breakpoint(780px down) {
+    .rp-header__content {
+      height: auto;
+    }
     .pr-img {
       width: 150px;
       height: 150px;
