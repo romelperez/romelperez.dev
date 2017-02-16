@@ -16,10 +16,10 @@ const cssnano =      require('cssnano');
 //
 const sassFiles = [{
   file: 'src/scss/core/core.scss',
-  outFile: 'assets/css/core.css'
+  outFile: 'public/css/core.css'
 }, {
   file: 'src/scss/index/index.scss',
-  outFile: 'assets/css/index.css'
+  outFile: 'public/css/index.css'
 }];
 const webpackConfig = require('./webpack.config.js');
 
@@ -51,7 +51,7 @@ gulp.task('sass', ['sass-bundle'], function () {
       pipe(rename({
         dirname: ''
       })).
-      pipe(gulp.dest('./assets/css')).
+      pipe(gulp.dest('./public/css')).
       pipe(livereload());
   });
 });
@@ -68,10 +68,10 @@ gulp.task('webpack-core', ['webpack-bundle'], function () {
     './lib/js/zepto.min.js',
     './lib/js/preloadjs-NEXT.min.js',
     './lib/js/soundjs-NEXT.min.js',
-    './assets/js/core.js'
+    './public/js/core.js'
   ]).
     pipe(concat('core.js')).
-    pipe(gulp.dest('./assets/js'));
+    pipe(gulp.dest('./public/js'));
 });
 
 gulp.task('webpack', ['webpack-bundle', 'webpack-core']);

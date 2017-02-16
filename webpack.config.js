@@ -1,5 +1,6 @@
-const path = require('path');
 const webpack = require('webpack');
+
+const dev = process.env.NODE_ENV !== 'production';
 
 module.exports = {
   entry: {
@@ -7,15 +8,11 @@ module.exports = {
     index: './src/js/index/index.js'
   },
   output: {
-    path: './assets/js/',
+    path: './public/js/',
     filename: '[name].js'
   },
   resolve: {
-    root: path.resolve(__dirname),
-    alias: {
-      data: 'api/data'
-    },
-    extensions: ['', '.js', '.jsx']
+    fallback: process.cwd()
   },
   module: {
     loaders: [
@@ -29,9 +26,10 @@ module.exports = {
       }
     ]
   },
+  devtool: dev ? 'inline-source-map' : undefined,
   plugins: [
     new webpack.DefinePlugin({
-      'process.env.NODE_ENV': JSON.stringify(process.env.NODE_ENV || 'production')
+      'process.env.NODE_ENV': JSON.stringify(process.env.NODE_ENV || 'development')
     }),
     new webpack.optimize.UglifyJsPlugin({
       compress: { warnings: false }

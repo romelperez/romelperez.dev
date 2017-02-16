@@ -1,10 +1,19 @@
 {
-  "name": "romelperez",
-  "version": "1.2.3",
+  "name": "romelperez.com",
+  "version": "1.2.4",
   "description": "Romel Pérez personal website",
   "author": "Romel Pérez (romelperez.com)",
   "license": "GNUv3",
   "private": true,
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "start:production": "NODE_ENV=production PORT=80 npm run start",
+    "build": "npm run build-sass && npm run build-js",
+    "build:production": "NODE_ENV=production npm run build-sass && NODE_ENV=production npm run build-js",
+    "build-sass": "gulp sass",
+    "build-js": "gulp webpack"
+  },
   "dependencies": {
     "express": "^4.14.0",
     "extend": "^3.0.0",
@@ -12,13 +21,19 @@
   },
   "devDependencies": {
     "autoprefixer": "^6.3.7",
+    "babel-eslint": "^7.1.1",
+    "babel-polyfill": "^6.23.0",
+    "babel-preset-stage-1": "^6.22.0",
     "babel-core": "^6.9.1",
     "babel-loader": "^6.2.4",
     "babel-preset-es2015": "^6.9.0",
     "babel-preset-react": "^6.5.0",
+    "eslint": "^3.15.0",
+    "eslint-plugin-react": "^6.10.0",
     "cssnano": "^3.7.3",
     "foundation-sites": "^6.2.3",
     "gulp": "^3.9.1",
+    "gulp-concat": "^2.6.1",
     "gulp-livereload": "^3.8.1",
     "gulp-postcss": "^6.1.1",
     "gulp-rename": "^1.2.2",
@@ -37,13 +52,5 @@
     "redux": "^3.5.2",
     "redux-devtools": "^3.3.1",
     "webpack": "^1.13.1"
-  },
-  "main": "server.js",
-  "scripts": {
-    "start": "pm2 start server.js",
-    "build": "npm run build-sass && npm run build-js",
-    "build-sass": "./node_modules/.bin/gulp sass",
-    "build-js": "./node_modules/.bin/gulp webpack",
-    "test": "./node_modules/.bin/karma start karma.conf.js"
   }
 }
