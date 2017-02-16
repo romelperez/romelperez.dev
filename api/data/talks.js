@@ -6,4 +6,12 @@ module.exports = [{
   urls: [
     '/charlas/polymer'
   ]
+}, {
+  id: 1,
+  name: 'Real-Time Web con WebSocket',
+  lang: 'es',
+  template: 'websocket',
+  urls: [
+    '/charlas/websocket'
+  ]
 }];

@@ -178,4 +178,13 @@ module.exports = [{
   type: 1,
   weight: 2,
   link: 'https://github.com/vulcan-estudios/web-testing'
+}, {
+  id: 20,
+  name: 'Real-Time Web con WebSocket',
+  description: 'Una charla acerca de aplicaciones real-time implementando tecnologías basadas en WebSocket, un estándar para crear comunicaciones bidireccionales simultáneas en plataformas web.',
+  date: '2017-02-17',
+  lang: 'es',
+  type: 2,
+  weight: 2,
+  link: '/charlas/websocket'
 }];

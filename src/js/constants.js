@@ -1,4 +1,4 @@
-import userData from 'data/user.js';
+import userData from 'api/data/user.js';
 
 export default {
   ga: 'UA-50433259-1',

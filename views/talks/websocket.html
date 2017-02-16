@@ -1,0 +1,317 @@
+<!DOCTYPE HTML>
+<html lang="es">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+		<meta name="description" content="Una charla acerca de aplicaciones real-time implementando tecnologías basadas en WebSocket, un estándar para crear comunicaciones bidireccionales simultáneas en plataformas web">
+		<meta name="author" content="Romel Pérez">
+    <title>Real-Time Web con WebSocket | Romel Pérez</title>
+
+    <link rel="stylesheet" href="/css/core.css">
+		<link rel="stylesheet" href="/css/reveal/reveal.css">
+		<link rel="stylesheet" href="/css/reveal/theme.css" id="theme">
+    <script src="/js/reveal/links-deps.js"></script>
+
+    <style>
+      .s-content p {
+        background-color: rgba(0,0,0,0.85);
+      }
+      .s-link a {
+        padding: 20px;
+        background-color: rgba(0,0,0,0.6);
+      }
+      .reveal section img {
+        max-height: 600px;
+      }
+    </style>
+	</head>
+	<body>
+
+		<div class="reveal">
+			<div class="slides">
+
+        <section>
+          <img src="/img/talks/websocket/websocket.png">
+          <h1>Real-Time Web con WebSocket</h1>
+          <p>Crea sistemas de comunicación instantánea en plataformas web con WebSocket y JavaScript</p>
+        </section>
+
+        <section>
+          <h2>HTML5 WebSocket</h2>
+          <img src="/img/talks/websocket/html5features.jpg">
+        </section>
+
+        <section>
+          <h2>Compatibilidad</h2>
+          <img src="/img/talks/websocket/compatibility.png">
+        </section>
+
+        <section>
+          <h2>¿Cómo funciona?</h2>
+          <p>WebSocket es un protocolo que nos permite crear sistemas bidireccionales
+            de comunicación instantánea y simultánea entre clientes y servidores.</p>
+        </section>
+
+        <section>
+          <h2>¿Cómo funciona?</h2>
+          <img src="/img/talks/websocket/websockets_guides.png">
+        </section>
+
+        <section>
+          <img src="/img/talks/websocket/socketio.png" alt="socket.io">
+        </section>
+
+        <section>
+          <h2>Ejemplo</h2>
+          <p>Vamos a crear un pequeño chat en Node.js.</p>
+          <p>Instalamos los paquetes:</p>
+          <pre><code class="hlbash" data-trim>
+$ npm install socket.io express
+          </code></pre>
+          <p>Y en los siguientes archivos:</p>
+          <ul>
+            <li><b><code>server.js</code></b>: servidor de sockets en Node.js</li>
+            <li><b><code>index.html</code></b>: interfaz del chat</li>
+            <li><b><code>client.js</code></b>: aplicación del socket del cliente</li>
+          </ul>
+        </section>
+
+        <section>
+
+          <section>
+            <h2><code>server.js</code></h2>
+            <p>Creamos un servidor usando Express.js y socket.io:</p>
+            <pre><code class="hljs" data-trim>
+const http = require('http');
+const express = require('express');
+const socketio = require('socket.io');
+
+const app = express();
+const server = http.createServer(app);
+const io = socketio(server);
+            </code></pre>
+          </section>
+
+          <section>
+            <h2><code>server.js</code></h2>
+            <p>Inicializamos la forma de conexión de nuevos sockets:</p>
+            <pre><code class="hljs" data-trim>
+// ...
+
+// Cuando un socket se conecta.
+io.on('connection', function (socket) {
+
+  console.log('Usuario conectado.');
+
+  // ...
+});
+            </code></pre>
+          </section>
+
+          <section>
+            <h2><code>server.js</code></h2>
+            <p>Tratamos la desconexión de un usuario:</p>
+            <pre><code class="hljs" data-trim>
+// Cuando un socket se conecta.
+io.on('connection', function (socket) {
+
+  console.log('Usuario conectado.');
+
+  // Cuando el socket conectado se desconecta.
+  socket.on('disconnect', function () {
+    console.log('Usuario desconectado.');
+  });
+
+  // ...
+});
+            </code></pre>
+          </section>
+
+          <section>
+            <h2><code>server.js</code></h2>
+            <p>Recibimos y reenviamos mensajes de usuarios:</p>
+            <pre><code class="hljs" data-trim>
+io.on('connection', function (socket) {
+  // ...
+
+  // Al recibir el evento 'new:message' del socket, el cual
+  // representa un nuevo mensaje del usuario.
+  socket.on('new:message', function (data) {
+
+    // Reenviamos el mensaje a todos los demás conectados
+    // emitiendoles el evento 'new:message' con los datos.
+    socket.broadcast.emit('new:message', data);
+
+    const { username, value } = data;
+    console.log(`Nuevo mensaje: User="${username}", Val="${value}".`);
+  });
+});
+            </code></pre>
+          </section>
+
+          <section>
+            <h2><code>server.js</code></h2>
+            <p>Finalmente, ponemos pública la carpeta e iniciamos el servidor escuchando en el puerto 4000:</p>
+            <pre><code class="hljs" data-trim>
+// ...
+
+app.use(express.static(__dirname));
+
+server.listen(4000, function (err) {
+  if (err) throw err;
+  console.log('Servidor escuchando en http://127.0.0.1:4000');
+});
+            </code></pre>
+          </section>
+
+        </section>
+
+        <section>
+
+          <section>
+            <h2><code>index.html</code></h2>
+            <p>Creamos nuestra aplicación HTML:</p>
+            <pre><code class="hlhtml" data-trim>
+&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+  &lt;head&gt;
+    &lt;meta charset="utf-8"&gt;
+    &lt;link rel="stylesheet" href="/styles.css"&gt;
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;!-- ... --&gt;
+    &lt;script src="https://code.jquery.com/jquery-3.1.1.min.js"&gt;&lt;/script&gt;
+    &lt;script src="/socket.io/socket.io.js"&gt;&lt;/script&gt;
+    &lt;script src="/client.js" async&gt;&lt;/script&gt;
+  &lt;/body&gt;
+&lt;/html&gt;
+            </code></pre>
+          </section>
+
+          <section>
+            <h2><code>index.html</code></h2>
+            <p>Definimos nuestra interfaz del chat:</p>
+            <pre><code class="hlhtml" data-trim>
+&lt;main class="main"&gt;
+
+  &lt;section class="messages"&gt;
+    &lt;div id="list"&gt;&lt;/div&gt;
+  &lt;/section&gt;
+
+  &lt;section class="control"&gt;
+    &lt;input id="username" type="text" placeholder="Nombre"&gt;
+    &lt;input id="value" type="text" placeholder="Escribe un mensaje..."&gt;
+    &lt;button id="send" type="submit"&gt;Enviar&lt;/button&gt;
+  &lt;/section&gt;
+
+&lt;/main&gt;
+            </code></pre>
+          </section>
+
+          <section>
+            <h2>Screenshot</h2>
+            <img src="/img/talks/websocket/example-screenshot.png">
+          </section>
+
+        </section>
+
+        <section>
+
+          <section>
+            <h2><code>client.js</code></h2>
+            <p>Creamos una conexión de socket nueva:</p>
+            <pre><code class="hljs" data-trim>
+// Crear un nuevo socket.
+const socket = io();
+
+// ...
+            </code></pre>
+          </section>
+
+          <section>
+            <h2><code>client.js</code></h2>
+            <p>Creamos una función para agregar un mensaje a la interfaz:</p>
+            <pre><code class="hljs" data-trim>
+function addMsg (data) {
+  const { username, value } = data;
+  $('#list').append(
+    `<p><b>${username}</b>: ${value}</p>`
+  );
+}
+            </code></pre>
+          </section>
+
+          <section>
+            <h2><code>client.js</code></h2>
+            <p>Agregamos una función para enviar un mensaje a los otros usuarios:</p>
+            <pre><code class="hljs" data-trim>
+function sendMsg () {
+  const data = {
+    username: $('#username').val(),
+    value: $('#value').val()
+  };
+
+  if (!data.value) return;
+
+  // Enviar mensaje a otros usuarios.
+  socket.emit('new:message', data);
+
+  // Agregar el propio mensaje a la interfaz.
+  addMsg(data);
+
+  $('#value').val('').focus();
+}
+            </code></pre>
+          </section>
+
+          <section>
+            <h2><code>client.js</code></h2>
+            <p>Definimos los eventos de interfaz y de socket:</p>
+            <pre><code class="hljs" data-trim>
+/* Al recibir un mensaje de otro usuario desde el servidor */
+socket.on('new:message', function (data) {
+  addMsg(data);
+});
+
+/* Al hacer click en el botón de enviar */
+$('#send').on('click', function () {
+  sendMsg();
+});
+
+/* Al presionar la tecla ENTER */
+$('#value').on('keypress', function (event) {
+  if (event.which === 13) {
+    sendMsg();
+  }
+});
+            </code></pre>
+          </section>
+
+        </section>
+
+        <section>
+          <h2>Resultado</h2>
+          <img src="/img/talks/websocket/example-action.png">
+        </section>
+
+        <section class="s-link" data-background="/img/talks/websocket/animation.gif">
+          <h3><a href="https://github.com/BucaramangaJS/chat" target="_blank">Quiero ver el ejemplo completo</a></h3>
+        </section>
+
+        <section>
+          <p>Creado por <a href="/">Romel Pérez</a>.</p>
+        </section>
+
+			</div>
+		</div>
+
+    <script src="/js/core.js"></script>
+		<script src="/js/reveal/head.min.js"></script>
+		<script src="/js/reveal/reveal.js"></script>
+		<script src="/js/reveal/initialize.js"></script>
+	</body>
+</html>

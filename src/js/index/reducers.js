@@ -1,6 +1,6 @@
-import userData from 'data/user.js';
-import projectsData from 'data/projects.js';
-import projectTypesData from 'data/projectTypes.js';
+import userData from 'api/data/user.js';
+import projectsData from 'api/data/projects.js';
+import projectTypesData from 'api/data/projectTypes.js';
 
 const projectsTypeAll = {
   id: -1,
