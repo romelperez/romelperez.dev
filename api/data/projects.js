@@ -187,4 +187,13 @@ module.exports = [{
   type: 2,
   weight: 2,
   link: '/charlas/websocket'
+}, {
+  id: 21,
+  name: 'Calumet Realtime',
+  description: 'Framework de comunicación en tiempo real para el proyecto COMA del Grupo Calumet. RealTime es un servidor web real-time basado en node.js, express.js, socket.io y waterline para integrar con una plataforma de usuarios.',
+  date: '2017-03-02',
+  lang: 'es',
+  type: 0,
+  weight: 1,
+  link: 'https://github.com/calumet/realtime'
 }];
