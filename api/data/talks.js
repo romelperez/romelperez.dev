@@ -14,4 +14,12 @@ module.exports = [{
   urls: [
     '/charlas/websocket'
   ]
+}, {
+  id: 2,
+  name: 'Chrome Dev Tools',
+  lang: 'es',
+  template: 'chrome-devtools',
+  urls: [
+    '/charlas/chrome-devtools'
+  ]
 }];

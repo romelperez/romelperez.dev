@@ -196,4 +196,13 @@ module.exports = [{
   type: 0,
   weight: 1,
   link: 'https://github.com/calumet/realtime'
+}, {
+  id: 22,
+  name: 'Chrome DevTools',
+  description: 'Charla de sobrevista a las herramientas de desarrollo y debug DevTools del navegador Google Chrome para programadores y diseñadores de la Internet. Inspecciona el DOM, trackea errores, revisa recursos y mucho más.',
+  date: '2017-03-30',
+  lang: 'es',
+  type: 2,
+  weight: 2,
+  link: '/charlas/chrome-devtools'
 }];
