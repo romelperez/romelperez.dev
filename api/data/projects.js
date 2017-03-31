@@ -1,7 +1,7 @@
 module.exports = [{
   id: 0,
   name: 'Comunidad Laureanista',
-  description: 'Official website for the school Instituto Técnico Industrial Laureano Gómez Castro.',
+  description: 'Official website for the Instituto Técnico Industrial Laureano Gómez Castro school.',
   date: '2011-11-22',
   lang: 'es',
   type: 0,
@@ -118,7 +118,7 @@ module.exports = [{
 }, {
   id: 13,
   name: 'VulcanUp',
-  description: 'jQuery plugin to upload single files and preview images using blueimp/jQuery-File-Upload.',
+  description: 'Custom widget as a jQuery plugin to upload single files and preview images using blueimp/jQuery-File-Upload.',
   date: '2016-07-08',
   lang: 'en',
   type: 0,
@@ -135,17 +135,17 @@ module.exports = [{
   link: 'http://vulcan-estudios.github.io/vulcanval'
 }, {
   id: 15,
-  name: 'PRHONE Graphical User Interface',
-  description: 'PRHONE GUI, a simple graphical user interface library inspired in science fiction (sci-fi) designs and animations for web sites and applications made in SASS and React.',
+  name: 'Arwes',
+  description: 'Simple graphical user interface framework inspired in science fiction (sci-fi) and futuristic designs and animations for web sites and applications made in SASS and React.',
   date: '2016-07-14',
   lang: 'en',
   type: 0,
-  weight: 3,
-  link: 'https://github.com/romelperez/prhone-gui'
+  weight: 1,
+  link: 'https://github.com/romelperez/arwes'
 }, {
   id: 16,
   name: 'Introducción a Polymer',
-  description: 'Una introducción a la librería Polymer para crear web components de Google, junto con ejemplos sencillos explicando sus rasgos importantes y uso para crear páginas y aplicaciones web.',
+  description: 'An introduction to the Polymer, a library to create web components, created and supported by Google, along with easy examples explaining its main features and how to use it.',
   date: '2016-07-29',
   lang: 'es',
   type: 2,
@@ -154,7 +154,7 @@ module.exports = [{
 }, {
   id: 17,
   name: 'Introducción a JavaScript ES2015',
-  description: 'Introducción a los features de JavaScript en su versión ES2015 usando como ejemplo el transpilador de Babel en Node.js con Babel CLI y en el navegador con el module bundler Webpack.',
+  description: 'An introduction to the main features of JavaScript ECMAScript 2015 using the transpiler Babel in Node.js with Babel CLI and the module bundler Webpack.',
   date: '2016-10-25',
   lang: 'es',
   type: 1,
@@ -163,7 +163,7 @@ module.exports = [{
 }, {
   id: 18,
   name: 'Introducción a Vagrant',
-  description: 'Introducción a la herramienta Vagrant, la cual nos permite crear y trabajar en ambientes de desarrollo modularizados, configurables y livianos en diferentes entornos operativos. Se hacen pruebas con un ambiente Linux Ubuntu/Xenial.',
+  description: 'An introduction to Vagrant, a tool to create and work with virtualized environments to develop software. It is configurable and modular. Tests made in Ubuntu/Xenial.',
   date: '2016-10-26',
   lang: 'es',
   type: 1,
@@ -172,7 +172,7 @@ module.exports = [{
 }, {
   id: 19,
   name: 'Introducción a Testing de Web Apps',
-  description: 'Una introducción general a software testing orientada a aplicaciones web basadas en JavaScript con ejemplos de implementación.',
+  description: 'General introduction to automated testing of web applications using JavaScript and Node.js, along with some libraries and frameworks to examine the ideas.',
   date: '2016-11-12',
   lang: 'es',
   type: 1,
@@ -181,7 +181,7 @@ module.exports = [{
 }, {
   id: 20,
   name: 'Real-Time Web con WebSocket',
-  description: 'Una charla acerca de aplicaciones real-time implementando tecnologías basadas en WebSocket, un estándar para crear comunicaciones bidireccionales simultáneas en plataformas web.',
+  description: 'Talk about real-time applications implementing technologies based on WebSocket, an standard to create simultaneous bidirectional communication in web platforms.',
   date: '2017-02-17',
   lang: 'es',
   type: 2,
@@ -190,7 +190,7 @@ module.exports = [{
 }, {
   id: 21,
   name: 'Calumet Realtime',
-  description: 'Framework de comunicación en tiempo real para el proyecto COMA del Grupo Calumet. RealTime es un servidor web real-time basado en node.js, express.js, socket.io y waterline para integrar con una plataforma de usuarios.',
+  description: 'Real-Time communication framework for the project COMA of Grupo Calumet. RealTime is a web server based on Node.js, Express.js, Socket.io and Waterline to integrate with the existing platform of users.',
   date: '2017-03-02',
   lang: 'es',
   type: 0,
@@ -198,8 +198,17 @@ module.exports = [{
   link: 'https://github.com/calumet/realtime'
 }, {
   id: 22,
+  name: 'React / Redux Examples',
+  description: 'A serie of examples to learn the tools based on React and Redux libraries. The examples were used in workshops to teach and learn about the React ecosystem.',
+  date: '2017-03-04',
+  lang: 'es',
+  type: 0,
+  weight: 3,
+  link: 'https://github.com/vulcan-estudios/react-examples'
+}, {
+  id: 23,
   name: 'Chrome DevTools',
-  description: 'Charla de sobrevista a las herramientas de desarrollo y debug DevTools del navegador Google Chrome para programadores y diseñadores de la Internet. Inspecciona el DOM, trackea errores, revisa recursos y mucho más.',
+  description: 'Talk about the Developer Tools (DevTools) of the browser Google Chrome for programmers and designers working with web technologies. Inspect the DOM, track errors, review resources and much more.',
   date: '2017-03-30',
   lang: 'es',
   type: 2,
