@@ -22,7 +22,7 @@ module.exports = {
   }, {
     icon: 'linkedin',
     name: 'LinkedIn',
-    href: 'https://www.linkedin.com/in/romelperez/en'
+    href: 'https://www.linkedin.com/in/romelperez'
   }],
   location: {
     name: 'Bucaramanga',
