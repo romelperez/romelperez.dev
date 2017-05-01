@@ -1,6 +1,6 @@
 {
   "name": "romelperez.com",
-  "version": "1.4.2",
+  "version": "1.4.3",
   "description": "Romel Pérez personal website",
   "author": "Romel Pérez (romelperez.com)",
   "license": "GNUv3",
@@ -14,6 +14,7 @@
     "build-sass": "gulp sass",
     "build-js": "gulp webpack",
     "deploy-setup": "pm2 deploy deploy.json production setup",
+    "deploy-update": "pm2 deploy deploy.json production",
     "deploy-run": "pm2 startOrRestart deploy.json --env production"
   },
   "dependencies": {
