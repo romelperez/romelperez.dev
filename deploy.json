@@ -13,7 +13,7 @@
   "deploy": {
     "production": {
       "user": "programmer",
-      "host": ["138.68.8.139"],
+      "host": ["107.170.240.110"],
       "ref": "origin/production",
       "repo": "git@github.com:romelperez/romelperez.com.git",
       "path": "/home/programmer/romelperez.com",
