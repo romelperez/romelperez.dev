@@ -1,6 +1,6 @@
 {
   "name": "romelperez.com",
-  "version": "1.4.1",
+  "version": "1.4.2",
   "description": "Romel Pérez personal website",
   "author": "Romel Pérez (romelperez.com)",
   "license": "GNUv3",
@@ -8,11 +8,13 @@
   "main": "server.js",
   "scripts": {
     "start": "node server.js",
-    "start:production": "NODE_ENV=production PORT=80 npm run start",
+    "start:production": "NODE_ENV=production npm run start",
     "build": "npm run build-sass && npm run build-js",
     "build:production": "NODE_ENV=production npm run build-sass && NODE_ENV=production npm run build-js",
     "build-sass": "gulp sass",
-    "build-js": "gulp webpack"
+    "build-js": "gulp webpack",
+    "deploy-setup": "pm2 deploy deploy.json production setup",
+    "deploy-run": "pm2 startOrRestart deploy.json --env production"
   },
   "dependencies": {
     "express": "^4.14.0",
