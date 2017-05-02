@@ -29,7 +29,7 @@ module.exports = {
     map: 'https://www.google.com.co/maps/place/Bucaramanga,+Santander+Department'
   },
   company: {
-    name: 'Vulcan Estudios',
-    href: 'http://vulcanst.co'
+    name: 'Medios TIC',
+    href: 'http://mediostic.com'
   }
 };
