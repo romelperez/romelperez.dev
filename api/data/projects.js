@@ -214,4 +214,22 @@ module.exports = [{
   type: 2,
   weight: 2,
   link: '/charlas/chrome-devtools'
+}, {
+  id: 24,
+  name: 'Asiste',
+  description: 'Web platform to manage social and business events. It let you control users, organizations, their portfolios and conversions in the event. You can also contact them publicly. It is a Progressive Web Application.',
+  date: '2017-04-26',
+  lang: 'es',
+  type: 0,
+  weight: 1,
+  link: 'http://asiste.com.co'
+}, {
+  id: 25,
+  name: 'BucaramangaJS Website',
+  description: 'Official website for the meetup community BucaramangaJS, an intention to share the JavaScript knownledge and expertise with the Bucaramanga community.',
+  date: '2017-05-11',
+  lang: 'es',
+  type: 0,
+  weight: 2,
+  link: 'http://bucaramangajs.org'
 }];
