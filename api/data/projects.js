@@ -232,4 +232,13 @@ module.exports = [{
   type: 0,
   weight: 2,
   link: 'http://bucaramangajs.org'
+}, {
+  id: 25,
+  name: 'Katherine Navarro Website',
+  description: 'Katherine Navarro\'s personal website with basic information and social media links.',
+  date: '2017-05-13',
+  lang: 'es',
+  type: 0,
+  weight: 3,
+  link: 'http://katherinenavarro.com'
 }];
