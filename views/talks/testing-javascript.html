@@ -228,20 +228,128 @@
           </section>
 
           <section>
+            <pre><code class="hlbash" data-trim>
+$ cd /my/project/folder/
+$ npm init -y
+$ npm install mocha
+            </code></pre>
+            <pre><code class="hltext" data-trim>
+- src/
+  - sum.js
+  - sum.test.js
+            </code></pre>
+            <pre><code class="hltext" data-trim>
+{
+  ...
+  "scripts": {
+    "test": "mocha './src/**/*.test.js'"
+  },
+  ...
+}
+            </code></pre>
+          </section>
+
+          <section>
+            <p><code>src/sum.test.js</code></p>
+            <pre><code class="hljs" data-trim>
+const sum = require('./sum');
+
+// Una agrupación
+describe('Sum', function () {
+
+  it('Sumar dos números positivos', function () {
+    // Una unidad de test
+  });
+
+  it('Sino recibe parametros retornar 0', function () {
+    // Una unidad de test
+  });
+});
+            </code></pre>
+          </section>
+
+          <section>
             <img src="/img/talks/testing-javascript/chaijs.png">
             <h3>Assertion Library: ChaiJS</h3>
             <p>Crea asertaciones usando los estilos TDD y BDD en Node.js y en el navegador, integrandose bien con cualquier test runner.</p>
             <p><small>Documentación: <a href="http://chaijs.com" target="_blank">chaijs.com</a></small></p>
           </section>
 
+          <section>
+            <pre><code class="hlbash" data-trim>
+$ cd /my/project/folder/
+$ npm install chai
+            </code></pre>
+            <p><code>src/sum.test.js</code></p>
+            <pre><code class="hljs" data-trim>
+const chai = require('chai');
+const sum = require('./sum');
+const { expect } = chai;
+
+describe('Sum', function () {
+
+  it('Sumar dos números positivos', function () {
+    const actual = sum(5, 4);
+    const expected = 9;
+    expect(actual).to.equal(expected);
+  });
+
+  it('Sino recibe parametros retornar 0', function () {
+    const actual = sum();
+    const expected = 0;
+    expect(actual).to.equal(expected);
+  });
+});
+            </code></pre>
+          </section>
+
+          <section>
+            <img src="/img/talks/testing-javascript/example1.png">
+          </section>
+
+          <section>
+            <p><code>src/sum.js</code></p>
+            <pre><code class="hljs" data-trim>
+module.exports = function (a, b) {
+  return a + b;
+};
+            </code></pre>
+          </section>
+
+          <section>
+            <img src="/img/talks/testing-javascript/example2.png">
+          </section>
+
+          <section>
+            <p><code>src/sum.js</code></p>
+            <pre><code class="hljs" data-trim>
+module.exports = function (a = 0, b = 0) {
+  return a + b;
+};
+            </code></pre>
+          </section>
+
+          <section>
+            <img src="/img/talks/testing-javascript/example3.png">
+          </section>
+
         </section>
 
         <section>
-
           <h2>Muy bonito pero ¿puedes hacer un ejemplo?</h2>
           <p>Creemos una pequeña calculadora haciendo uso de BDD con Mocha y Chai en Node.js</p>
           <p>Versión final en <a href="https://github.com/BucaramangaJS/testing-javascript" target="_blank">github.com/BucaramangaJS/testing-javascript</a></p>
+        </section>
 
+        <section>
+          <h2>Algunos Recursos</h2>
+          <ul>
+            <li><a href="https://www.youtube.com/playlist?list=PLAIjpj9Un1BBA1y_6VQuVLEuJY8rMavRV" target="_blank">Introducción a Testing de Web Apps</a></li>
+            <li><a href="https://medium.com/javascript-scene/5-common-misconceptions-about-tdd-unit-tests-863d5beb3ce9" target="_blank">5 Common Misconceptions About TDD &amp; Unit Tests</a></li>
+            <li><a href="https://www.youtube.com/watch?v=TWBDa5dqrl8" target="_blank">Unit testing: How to get your team started</a></li>
+            <li><a href="https://www.youtube.com/watch?v=tfkUN8Jr9zY" target="_blank">Unit Testing JavaScript</a></li>
+            <li><a href="https://addyosmani.com/first/" target="_blank">FIRST</a></li>
+          </ul>
         </section>
 
         <section>
