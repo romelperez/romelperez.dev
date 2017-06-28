@@ -22,4 +22,12 @@ module.exports = [{
   urls: [
     '/charlas/chrome-devtools'
   ]
+}, {
+  id: 3,
+  name: 'Testing en JavaScript con Mocha y Chai',
+  lang: 'es',
+  template: 'testing-javascript',
+  urls: [
+    '/charlas/testing-javascript'
+  ]
 }];

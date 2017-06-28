@@ -1,0 +1,259 @@
+<!DOCTYPE HTML>
+<html lang="es">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+    <meta name="theme-color" content="#021114">
+    <meta name="apple-mobile-web-app-title" content="Romel Pérez">
+    <meta name="apple-mobile-web-app-status-bar-style" content="#021114">
+    <meta name="msapplication-TileColor" content="#021114">
+		<meta name="description" content="Una introducción al testing de aplicaciones web basadas en JavaScript con Mocha y Chai implementando BDD">
+		<meta name="author" content="Romel Pérez">
+    <title>Testing en JavaScript con Mocha y Chai</title>
+
+    <meta property="og:title" content="Testing en JavaScript con Mocha y Chai">
+    <meta property="og:site_name" content="Romel Francisco Pérez Estrada">
+    <meta property="og:description" content="Una introducción al testing de aplicaciones web basadas en JavaScript con Mocha y Chai implementando BDD">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="http://romelperez.com/charlas/testing-javascript">
+    <meta property="og:image" content="http://romelperez.com/img/talks/testing-javascript/seo.jpg">
+
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Testing en JavaScript con Mocha y Chai">
+    <meta name="twitter:description" content="Una introducción al testing de aplicaciones web basadas en JavaScript con Mocha y Chai implementando BDD">
+    <meta name="twitter:site" content="@romelperez07">
+    <meta name="twitter:creator" content="@romelperez07">
+    <meta name="twitter:image" content="http://romelperez.com/img/talks/testing-javascript/seo.jpg">
+
+    <link rel="stylesheet" href="/css/core.css">
+		<link rel="stylesheet" href="/css/reveal/reveal.css">
+		<link rel="stylesheet" href="/css/reveal/theme.css" id="theme">
+
+    <script src="/js/reveal/links-deps.js"></script>
+    <style>
+      .s-content p {
+        background-color: rgba(0,0,0,0.85);
+      }
+      .s-link a {
+        padding: 20px;
+        background-color: rgba(0,0,0,0.6);
+      }
+      .reveal section img {
+        max-height: 600px;
+      }
+    </style>
+	</head>
+	<body>
+
+		<div class="reveal">
+			<div class="slides">
+
+        <section>
+          <div>
+            <img src="/img/talks/testing-javascript/javascript.png">
+            <img src="/img/talks/testing-javascript/mochajs.png">
+            <img src="/img/talks/testing-javascript/chaijs.png">
+          </div>
+          <h1>Testing en JavaScript con Mocha y Chai</h1>
+          <p>Una introducción al testing de aplicaciones web basadas en JavaScript con Mocha y Chai implementando BDD</p>
+        </section>
+
+        <section data-background="/img/talks/testing-javascript/analogy.png" data-background-size="contain"></section>
+
+        <section>
+
+          <section>
+            <h2>¿Testing? ¿Para qué?</h2>
+          </section>
+
+          <section>
+            <img src="/img/talks/testing-javascript/bug.png">
+            <h3>Reduce los bugs</h3>
+            <p>TDD reduce la densidad de bugs en producción entre un 40-80%.</p>
+            <p><small>Fuente: <a href="https://medium.com/javascript-scene/863d5beb3ce9" target="_blank">medium.com/javascript-scene/863d5beb3ce9</a></small></p>
+          </section>
+
+          <section>
+            <img src="/img/talks/testing-javascript/design.png">
+            <h3>Mejora el diseño y arquitectura</h3>
+            <p>Te ayuda a modularizar, independizar, enfocar, te obliga a desacoplar y además de ser una documentación viva.</p>
+          </section>
+
+          <section>
+            <img src="/img/talks/testing-javascript/people.png">
+            <h3>Organización y comunicación</h3>
+            <p>Facilita la organización del trabajo y mejora la comunicación entre miembros del equipo de desarrollo.</p>
+          </section>
+
+          <section>
+            <img src="/img/talks/testing-javascript/quality.png">
+            <h3>Calidad</h3>
+            <p>La confiabilidad y la calidad del producto final es mucho más alta cuando se testea el software</p>
+          </section>
+
+        </section>
+
+        <section>
+
+          <section>
+            <h2>¿Cuándo hacerlo?</h2>
+          </section>
+
+          <section>
+            <img src="/img/talks/testing-javascript/complexity.png">
+            <h3>En el proyecto</h3>
+            <p>Tamaño, complejidad, calendario, datos, entre otros.</p>
+          </section>
+
+          <section>
+            <img src="/img/talks/testing-javascript/people.png">
+            <h3>En el equipo</h3>
+            <p>Número de miembros, habilidad, entre otros.</p>
+          </section>
+
+          <section>
+            <img src="/img/talks/testing-javascript/money.png">
+            <img src="/img/talks/testing-javascript/time.png">
+            <h3>Costos y tiempos</h3>
+            <p>Testear cuesta y requiere tiempo, pero los resultados lo ameritan.</p>
+          </section>
+
+          <section data-background="/img/talks/testing-javascript/software_testing_curve.jpg" data-background-size="contain"></section>
+
+        </section>
+
+        <section>
+
+          <section>
+            <h2>¿Qué es software testing?</h2>
+          </section>
+
+          <section>
+            <img src="/img/talks/testing-javascript/testing.png">
+            <h3>Software Testing</h3>
+            <p>Es el proceso de investigar el proyecto con el objetivo de determinar la calidad del software.</p>
+            <p><small>Fuente: <a href="https://es.wikipedia.org/wiki/Pruebas_de_software" target="_blank">es.wikipedia.org/wiki/Pruebas_de_software</a></small></p>
+          </section>
+
+          <section>
+            <img src="/img/talks/testing-javascript/code.png">
+            <h3>Métodos</h3>
+            <ul>
+              <li><b>Estático vs dinámico</b>: sin ejecutar y ejecutando el software, como linting y demos respectivamente</li>
+              <li><b>Modelo de caja</b>: white-box, en donde se conoce el código fuente y black-box donde el mismo se desconoce</li>
+            </ul>
+          </section>
+
+          <section>
+            <img src="/img/talks/testing-javascript/code.png">
+            <h3>Niveles</h3>
+            <ul>
+              <li>Unit testing</li>
+              <li>Integration testing</li>
+              <li>System testing</li>
+            </ul>
+          </section>
+
+          <section>
+            <img src="/img/talks/testing-javascript/unit-testing.png">
+            <h4>Unit testing</h4>
+            <p>Unidades o componentes individuales.</p>
+          </section>
+
+          <section>
+            <img src="/img/talks/testing-javascript/integration-testing.png">
+            <h4>Integration testing</h4>
+            <p>Unidades o componentes individuales son combinados y testeados como grupo.</p>
+          </section>
+
+          <section>
+            <img src="/img/talks/testing-javascript/system-testing.png">
+            <h4>System testing</h4>
+            <p>El software completo o integrado es testeado.</p>
+          </section>
+
+          <section>
+            <img src="/img/talks/testing-javascript/code.png">
+            <h3>Tipos</h3>
+            <ul>
+              <li><b>Funcionales, no funcionales</b>: rasgos técnicos o no técnicos</li>
+              <li><b>Compatibilidad</b>: si el software funciona bien para diferentes plataformas</li>
+              <li><b>Rendimiento</b>: si el tiempo de carga o velocidad de respuesta es adecuado</li>
+              <li>Entre muchos otros</li>
+            </ul>
+          </section>
+
+        </section>
+
+        <section>
+
+          <section>
+            <h2>Severa panacea ¿cómo testeo?</h2>
+          </section>
+
+          <section>
+            <img src="/img/talks/testing-javascript/automatization.png">
+            <h3>Automatización</h3>
+            <p>Siempre se testea, sea el proceso manual o automatizado. Aunque es necesario hacer parte del proceso manual, la idea es automatizar lo mayor posible.</p>
+          </section>
+
+          <section>
+            <img src="/img/talks/testing-javascript/tdd.png">
+            <h3>TDD y BDD</h3>
+            <p>Test-Driven Development y Behaviour-Driven Development, hace uso de repetir el siguiente ciclo:</p>
+            <ul>
+              <li>Crea el test inicialmente fallido</li>
+              <li>Escribe el código para pasar el test</li>
+              <li>Mejora la versión del código</li>
+            </ul>
+          </section>
+
+          <section>
+            <img src="/img/talks/testing-javascript/code.png">
+            <h3>Herramientas</h3>
+            <ul>
+              <li><b>Test runner</b>: se encarga de ejecutar de manera organizada y controlada los tests</li>
+              <li><b>Assertion library</b>: ayuda en la validación y verificación las unidades de testeo</li>
+              <li><b>Debugger</b>: para encontrar las fuentes de los errores</li>
+            </ul>
+          </section>
+
+          <section>
+            <img src="/img/talks/testing-javascript/mochajs.png">
+            <h3>Test Runner: MochaJS</h3>
+            <p>Nos permite crear "test suites" en Node.js y en el navegador. Corre serialmente tests síncronos y asíncronos, generando reportes y mapeando errores de manera flexible.</p>
+            <p><small>Documentación: <a href="https://mochajs.org/" target="_blank">mochajs.org</a></small></p>
+          </section>
+
+          <section>
+            <img src="/img/talks/testing-javascript/chaijs.png">
+            <h3>Assertion Library: ChaiJS</h3>
+            <p>Crea asertaciones usando los estilos TDD y BDD en Node.js y en el navegador, integrandose bien con cualquier test runner.</p>
+            <p><small>Documentación: <a href="http://chaijs.com" target="_blank">chaijs.com</a></small></p>
+          </section>
+
+        </section>
+
+        <section>
+
+          <h2>Muy bonito pero ¿puedes hacer un ejemplo?</h2>
+          <p>Creemos una pequeña calculadora haciendo uso de BDD con Mocha y Chai en Node.js</p>
+          <p>Versión final en <a href="https://github.com/BucaramangaJS/testing-javascript" target="_blank">github.com/BucaramangaJS/testing-javascript</a></p>
+
+        </section>
+
+        <section>
+          <p>Creado por <a href="/">Romel Pérez</a>.</p>
+        </section>
+
+			</div>
+		</div>
+
+    <script src="/js/core.js"></script>
+		<script src="/js/reveal/head.min.js"></script>
+		<script src="/js/reveal/reveal.js"></script>
+		<script src="/js/reveal/initialize.js"></script>
+	</body>
+</html>

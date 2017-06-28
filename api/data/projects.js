@@ -217,7 +217,7 @@ module.exports = [{
 }, {
   id: 24,
   name: 'Asiste',
-  description: 'Web platform to manage social and business events. It let you control users, organizations, their portfolios and conversions in the event. You can also contact them publicly. It is a Progressive Web Application.',
+  description: 'Web platform to manage social and business events. It lets you control users, organizations, their portfolios and conversions in the event. You can also contact them publicly. It is a Progressive Web Application.',
   date: '2017-04-26',
   lang: 'es',
   type: 0,
@@ -241,4 +241,13 @@ module.exports = [{
   type: 0,
   weight: 3,
   link: 'http://katherinenavarro.com'
+}, {
+  id: 27,
+  name: 'Testing in JavaScript with Mocha and Chai',
+  description: 'Talk and walkthrough about software testing in web applications based in JavaScript with Mocha and Chai. The tutorial is focused on unit testing using the methodology Behaviour-Driven Development (BDD) on Node.js.',
+  date: '2017-06-29',
+  lang: 'es',
+  type: 2,
+  weight: 2,
+  link: '/charlas/testing-javascript'
 }];
