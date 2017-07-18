@@ -82,7 +82,7 @@ const Projects = React.createClass({
     const state = store.getState().toJS();
     const globalState = RP.store.getState().toJS();
 
-    const list = state.projects.reverse();
+    const list = state.projects.reverse().filter(item => !item.private);
     const types = state.projectTypes;
     const range = list.length === 0 ? 0 : list.length;
     const headerAnim = globalState.loaded ? 'rp-projects-header_anim' : '';

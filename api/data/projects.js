@@ -236,6 +236,7 @@ module.exports = [{
   id: 26,
   name: 'Katherine Navarro Website',
   description: 'Katherine Navarro\'s personal website with basic information and social media links.',
+  private: true,
   date: '2017-05-13',
   lang: 'es',
   type: 0,
@@ -250,4 +251,38 @@ module.exports = [{
   type: 2,
   weight: 2,
   link: '/charlas/testing-javascript'
+}, {
+  id: 28,
+  private: true,
+  name: 'DLOC',
+}, {
+  id: 29,
+  private: true,
+  name: 'BarSmarts',
+}, {
+  id: 30,
+  private: true,
+  name: 'SiembraViva',
+}, {
+  id: 31,
+  private: true,
+  name: 'Place to Pay',
+}, {
+  id: 32,
+  private: true,
+  name: 'Kuntur',
+}, {
+  id: 33,
+  private: true,
+  name: 'Luka',
+}, {
+  id: 34,
+  private: true,
+  inProgress: true,
+  name: 'Zambo',
+}, {
+  id: 35,
+  private: true,
+  inProgress: true,
+  name: 'Trust Games',
 }];
