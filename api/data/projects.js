@@ -285,4 +285,14 @@ module.exports = [{
   private: true,
   inProgress: true,
   name: 'Trust Games',
+}, {
+  id: 36,
+  private: true,
+  inProgress: true,
+  name: 'AirbitClub',
+}, {
+  id: 37,
+  private: true,
+  inProgress: false,
+  name: 'Yahoo! Sports Leaderboard',
 }];
