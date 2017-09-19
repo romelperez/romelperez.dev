@@ -25,11 +25,11 @@ module.exports = {
     href: 'https://www.linkedin.com/in/romelperez'
   }],
   location: {
-    name: 'Bucaramanga',
-    map: 'https://www.google.com.co/maps/place/Bucaramanga,+Santander+Department'
+    name: 'Medellín',
+    map: 'https://www.google.com.co/maps/place/Medellin'
   },
   company: {
-    name: 'Medios TIC',
-    href: 'http://mediostic.com'
+    name: 'Jobsity',
+    href: 'http://jobsity.com'
   }
 };
