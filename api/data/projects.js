@@ -282,9 +282,13 @@ module.exports = [{
   name: 'Zambo',
 }, {
   id: 35,
-  private: true,
-  inProgress: true,
   name: 'Trust Games',
+  description: 'A platform of educative interactive multiplayer video games to let you understand micro-economics with the starting game "Buscadores de rentas". The games seek to help you develop civic competencies such as argumentation, critical thinking and multiperspectivism.',
+  date: '2017-08-01',
+  lang: 'es',
+  type: 0,
+  weight: 1,
+  link: 'http://emar.mediostic.com'
 }, {
   id: 36,
   private: true,
@@ -295,4 +299,9 @@ module.exports = [{
   private: true,
   inProgress: false,
   name: 'Yahoo! Sports Leaderboard',
+}, {
+  id: 38,
+  private: true,
+  inProgress: true,
+  name: 'CMM',
 }];
