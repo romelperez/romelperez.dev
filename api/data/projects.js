@@ -288,16 +288,19 @@ module.exports = [{
   lang: 'es',
   type: 0,
   weight: 1,
-  link: 'http://emar.mediostic.com'
+  link: 'https://emar.mediostic.com'
 }, {
   id: 36,
-  private: true,
-  inProgress: true,
-  name: 'AirbitClub',
+  name: 'Te Contacto',
+  description: 'Small email marketing automation platform. Supports creation of custom campaigns with different levels of registration and email templates to add defined content types, control of persons registration using the UI and services, email analytics using SendGrid and multi-role user management.',
+  date: '2017-10-16',
+  lang: 'es',
+  type: 0,
+  weight: 1,
+  link: 'https://premium.ciudademprendedora.com.co'
 }, {
   id: 37,
   private: true,
-  inProgress: false,
   name: 'Yahoo! Sports Leaderboard',
 }, {
   id: 38,
