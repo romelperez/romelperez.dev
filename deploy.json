@@ -1,23 +1,14 @@
 {
   "apps": {
     "name": "romelperez",
-    "script": "server.js",
+    "script": "./node_modules/.bin/next",
+    "args": ["start", "-p", "7000"],
     "max_memory_restart": "300M",
     "instances" : 0,
     "exec_mode" : "cluster",
     "env_production": {
       "NODE_ENV": "production",
       "PORT": 7000
-    }
-  },
-  "deploy": {
-    "production": {
-      "user": "programmer",
-      "host": ["107.170.240.110"],
-      "ref": "origin/production",
-      "repo": "git@github.com:romelperez/romelperez.com.git",
-      "path": "/home/programmer/romelperez.com",
-      "post-deploy": "npm install && npm run deploy-run"
     }
   }
 }

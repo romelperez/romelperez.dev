@@ -12,6 +12,7 @@ pids
 lib-cov
 coverage
 nbproject
+.next
 
 *.log
 *.pid
@@ -35,3 +36,10 @@ nbproject
 Thumbs.db
 dump.rdb
 npm-debug.log
+package-lock.json
+
+##
+## PROJECT
+##
+
+build

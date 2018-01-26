@@ -18,8 +18,7 @@
     "chai": true,
     "assert": true,
     "expect": true,
-    "io": true,
-    "sinon": true
+    "Prism": true
   },
 
   "plugins": [
@@ -57,7 +56,7 @@
     "react/jsx-uses-vars": 2,
     "react/react-in-jsx-scope": 2,
     "block-scoped-var": [0],
-    "brace-style": [2, "stroustrup", {"allowSingleLine": true}],
+    "brace-style": [0],
     "camelcase": [0],
     "comma-dangle": [0],
     "comma-spacing": [2],
@@ -142,7 +141,7 @@
     "no-obj-calls": [2],
     "no-octal": [2],
     "no-octal-escape": [2],
-    "no-param-reassign": [0],
+    "no-param-reassign": [2],
     "no-path-concat": [0],
     "no-plusplus": [0],
     "no-process-env": [0],
@@ -178,7 +177,7 @@
     "no-extra-parens": [0],
     "one-var": [0],
     "operator-assignment": [0, "always"],
-    "operator-linebreak": [2, "after"],
+    "operator-linebreak": [2, "before"],
     "padded-blocks": [0],
     "quote-props": [0],
     "radix": [0],
