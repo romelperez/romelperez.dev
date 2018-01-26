@@ -1,6 +1,6 @@
-# [romelperez.com](http://romelperez.com)
+# [RomelPerez.com](https://romelperez.com)
 
-Romel Pérez personal website.
+Romel Pérez's personal website.
 
 ## License
 
