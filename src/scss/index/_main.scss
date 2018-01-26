@@ -1,7 +1,0 @@
-.pr-separator {
-  &.pr-separator_anim {
-    .pr-separator__gear {
-      animation: pr-anim-separator #{$pr-animation-time*2}ms ease-out;
-    }
-  }
-}
