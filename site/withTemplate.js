@@ -31,6 +31,7 @@ const generateBackground = color => ({
   level3: lighten(0.045, color),
 });
 const theme = {
+  animTime: 300,
   color: {
     primary: generateColor('#30fffe'),
   },

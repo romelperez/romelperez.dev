@@ -1,6 +1,7 @@
 const baseTitle = 'Romel Pérez - Personal Website';
 module.exports.titles = Object.assign(
   {
+    '/projects': `Projects | ${baseTitle}`,
     '/': baseTitle,
   }
 );

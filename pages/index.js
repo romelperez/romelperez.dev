@@ -5,7 +5,6 @@ import {
   Words,
   Image,
   Button,
-  Appear,
   Loading,
   createLoader,
   createResponsive,
@@ -13,7 +12,7 @@ import {
 } from 'arwes';
 
 import withTemplate from '../site/withTemplate';
-import Link from '../site/components/Link';
+import { Link, TextIcon } from '../site/components';
 
 const styles = theme => ({
   root: {
@@ -56,6 +55,9 @@ const styles = theme => ({
   },
   detail: {
     display: 'block',
+  },
+  textIcon: {
+    textAlign: 'center',
   },
   button: {
     width: '50%',
@@ -150,19 +152,13 @@ class Index extends React.Component {
 
               <div className={classes.section}>
                 <Link className={classes.detail} href='https://www.linkedin.com/in/romelperez' target='linkedin' onLink={this.onLink}>
-                  <Appear animate show={anim.entered}><i className='mdi mdi-code-brackets' /></Appear>
-                  {' '}
-                  <Words animate show={anim.entered}>Frontend Engineer</Words>
+                  <TextIcon className={classes.textIcon} show={anim.entered} icon='code-brackets'>Frontend Engineer</TextIcon>
                 </Link>
                 <Link className={classes.detail} href='https://jobsity.com' target='_blank' onLink={this.onLink}>
-                  <Appear animate show={anim.entered}><i className='mdi mdi-briefcase-outline' /></Appear>
-                  {' '}
-                  <Words animate show={anim.entered}>Jobsity</Words>
+                  <TextIcon className={classes.textIcon} show={anim.entered} icon='briefcase-outline'>Jobsity</TextIcon>
                 </Link>
                 <Link className={classes.detail} href='https://www.google.com.co/maps/place/Medellin' target='_blank' onLink={this.onLink}>
-                  <Appear animate show={anim.entered}><i className='mdi mdi-map-marker-outline' /></Appear>
-                  {' '}
-                  <Words animate show={anim.entered}>Medellin</Words>
+                  <TextIcon className={classes.textIcon} show={anim.entered} icon='map-marker-outline'>Medellin</TextIcon>
                 </Link>
               </div>
 
@@ -170,6 +166,11 @@ class Index extends React.Component {
                 <Link className={classes.detail} href='/projects' onLink={this.onLink}>
                   <Button className={classes.button} animate show={anim.entered}>
                     {anim2 => <Words animate show={anim2.entered}>Projects</Words>}
+                  </Button>
+                </Link>
+                <Link className={classes.detail} href='https://www.linkedin.com/in/romelperez' target='linkedin' onLink={this.onLink}>
+                  <Button className={classes.button} animate show={anim.entered}>
+                    {anim2 => <Words animate show={anim2.entered}>Curriculum</Words>}
                   </Button>
                 </Link>
                 <Link className={classes.detail} href='https://github.com/romelperez' target='github' onLink={this.onLink}>
@@ -180,11 +181,6 @@ class Index extends React.Component {
                 <Link className={classes.detail} href='https://twitter.com/romelperez07' target='twitter' onLink={this.onLink}>
                   <Button className={classes.button} animate show={anim.entered}>
                     {anim2 => <Words animate show={anim2.entered}>Twitter</Words>}
-                  </Button>
-                </Link>
-                <Link className={classes.detail} href='https://www.linkedin.com/in/romelperez' target='linkedin' onLink={this.onLink}>
-                  <Button className={classes.button} animate show={anim.entered}>
-                    {anim2 => <Words animate show={anim2.entered}>LinkedIn</Words>}
                   </Button>
                 </Link>
               </div>
