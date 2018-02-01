@@ -105,12 +105,12 @@ function Project (props) {
           </div>
         </Appear>
         {!!image && (
-          <Appear
-            style={{ backgroundImage: `url(${image})` }}
-            className={classes.image}
-            animate
-            show={anim.entered}
-          />
+        <Appear
+          style={{ backgroundImage: `url(${image})` }}
+          className={classes.image}
+          animate
+          show={anim.entered}
+        />
         )}
       </div>
       )}
