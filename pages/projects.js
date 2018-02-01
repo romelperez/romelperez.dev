@@ -1,6 +1,7 @@
 import React from 'react';
 import cx from 'classnames';
 import moment from 'moment';
+import emergence from 'emergence.js';
 import { withStyles, Arwes, Row, Appear, Words } from 'arwes';
 
 import { projects } from '../site/settings';
@@ -38,9 +39,13 @@ const styles = theme => ({
 
 class Projects extends React.Component {
 
+  // Reference to main element.
+  rootEl: null;
+
   constructor () {
     super(...arguments);
     this.state = {
+      shownIndex: 0,
       // Animations enabled by levels.
       animLvl0: false,
       animLvl1: false,
@@ -49,11 +54,26 @@ class Projects extends React.Component {
   }
 
   componentDidMount () {
+    emergence.init({
+      container: this.rootEl,
+      throttle: 200,
+      callback: (element, state) => {
+        if (state === 'visible') {
+          const newIndex = +element.getAttribute('data-index');
+          if (newIndex > this.state.shownIndex) {
+            this.setState({ shownIndex: newIndex });
+          }
+        }
+      }
+    });
+
     this.setState({ animLvl0: true });
+
+    setTimeout(() => emergence.engage(), 0);
   }
 
   render () {
-    const { animLvl0, animLvl1, animLvl2 } = this.state;
+    const { shownIndex, animLvl0, animLvl1, animLvl2 } = this.state;
     const { classes, resources } = this.props;
 
     const list = projects.
@@ -69,7 +89,7 @@ class Projects extends React.Component {
         pattern={resources.pattern}
       >
         {anim => (
-        <div className={classes.root}>
+        <div className={classes.root} ref={el => (this.rootEl = el)}>
 
           <Header
             animate
@@ -101,15 +121,17 @@ class Projects extends React.Component {
               </Row>
               <Row col noMargin s={12}>
 
-                {list.map(project => (
+                {list.map((project, index) => (
                 <Link
                   key={project.id}
                   className={classes.project}
                   href={project.link}
                   onLink={this.onLink}
+                  data-index={index}
+                  data-emergence='hidden'
                 >
                   <Project
-                    show={animLvl2}
+                    show={index <= shownIndex && animLvl2}
                     headerSize='h3'
                     header={project.name}
                     description={project.description}
