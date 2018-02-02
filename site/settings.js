@@ -395,6 +395,28 @@ module.exports.projects = [
     scale: 3,
     link: 'https://arwes.romelperez.com',
     image: 'https://firebasestorage.googleapis.com/v0/b/romelperez-qw74.appspot.com/o/projects%2Farwes.jpg?alt=media&token=a30cb8a7-10ec-41b0-b609-9a3589d424d4'
+  },
+  {
+    id: '0bef74ea-23f9-43b4-9382-35aa44ea623c',
+    name: 'Sirena Autocontrolada',
+    description: 'La Sirena Autocontrolada es un dispositivo electrónico controlado por un microcontrolador PIC 16F84A-4 que tiene como función gestionar las alertas realizadas con la sirena eléctrica en el plantel principal para los cambios en el horario definido en él.',
+    date: '2011-10-09',
+    lang: 'es',
+    type: 'code',
+    scale: 3,
+    link: 'https://github.com/romelperez/sirena-autocontrolada',
+    image: 'https://firebasestorage.googleapis.com/v0/b/romelperez-qw74.appspot.com/o/projects%2Fsirena-autocontrolada-itilgc.jpg?alt=media&token=7aac3353-6868-4448-b7ba-60179466af65'
+  },
+  {
+    id: '1345b40a-0c97-4220-9ae5-197b892b1784',
+    name: 'Calculador Matemático',
+    description: 'Calculadora de funciones, vectores, triángulos matemáticos y ley de Ohm.',
+    date: '2011-09-01',
+    lang: 'es',
+    type: 'code',
+    scale: 3,
+    link: 'https://github.com/romelperez/calculador-matematico',
+    image: 'https://firebasestorage.googleapis.com/v0/b/romelperez-qw74.appspot.com/o/projects%2Fcalculador-matematico.jpg?alt=media&token=c8e679da-485d-41c8-943f-be6b2c3b2b99'
   }
 ];
 
