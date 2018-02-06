@@ -37,20 +37,20 @@ export default class AppDocument extends Document {
           <meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1' />
           <title>{title}</title>
 
-          <meta name='description' content="Romel Pérez's personal website" />
+          <meta name='description' content="Software engineering autodidact. Enthusiast, JavaScript dev, Sci-Fi and nature fan. Making the world a better place through lines of code" />
           <meta name='keywords' content='romel perez, romel pérez, prhone, software engineer, frontend engineer, programmer' />
           <meta name='robots' content='index, follow' />
 
           <meta property='og:title' content={title} />
           <meta property='og:site_name' content={title} />
-          <meta property='og:description' content="Romel Pérez's personal website" />
+          <meta property='og:description' content="Software engineering autodidact. Enthusiast, JavaScript dev, Sci-Fi and nature fan. Making the world a better place through lines of code" />
           <meta property='og:type' content='website' />
           <meta property='og:url' content='https://romelperez.com' />
           <meta property='og:image' content='https://romelperez.com/static/img/romelperez.jpg' />
 
           <meta name='twitter:card' content='summary_large_image' />
           <meta name='twitter:title' content={title} />
-          <meta name='twitter:description' content="Romel Pérez's personal website" />
+          <meta name='twitter:description' content="Software engineering autodidact. Enthusiast, JavaScript dev, Sci-Fi and nature fan. Making the world a better place through lines of code" />
           <meta name='twitter:site' content='@romelperez07' />
           <meta name='twitter:creator' content='@romelperez07' />
           <meta name='twitter:image' content='https://romelperez.com/static/img/romelperez.jpg' />
