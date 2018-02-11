@@ -175,7 +175,7 @@ module.exports.default = [
     lang: 'es',
     type: 'talk',
     scale: 2,
-    link: '/charlas/polymer',
+    link: '/talks/polymer',
     image: 'https://firebasestorage.googleapis.com/v0/b/romelperez-qw74.appspot.com/o/projects%2Fbucaramangajs-v3-polymer.jpg?alt=media&token=c7e03a28-b3f0-4d52-8a52-5f70dab0adcf'
   },
   {
@@ -216,7 +216,7 @@ module.exports.default = [
     lang: 'es',
     type: 'talk',
     scale: 2,
-    link: '/charlas/websocket',
+    link: '/talks/websocket',
     image: 'https://firebasestorage.googleapis.com/v0/b/romelperez-qw74.appspot.com/o/projects%2Fbucaramangajs-v4-realtime.jpg?alt=media&token=72f14133-3e63-4e6b-aa5d-767ed13702ed'
   },
   {
@@ -248,7 +248,7 @@ module.exports.default = [
     lang: 'es',
     type: 'talk',
     scale: 2,
-    link: '/charlas/chrome-devtools',
+    link: '/talks/chrome-devtools',
     image: 'https://firebasestorage.googleapis.com/v0/b/romelperez-qw74.appspot.com/o/projects%2Fbucaramangajs-v5-devtools.jpg?alt=media&token=b3222db7-529c-4a29-8aee-0ee17699dabc'
   },
   {
@@ -292,7 +292,7 @@ module.exports.default = [
     lang: 'es',
     type: 'talk',
     scale: 2,
-    link: '/charlas/testing-javascript',
+    link: '/talks/testing-javascript',
     image: 'https://firebasestorage.googleapis.com/v0/b/romelperez-qw74.appspot.com/o/projects%2Fbucaramangajs-v8-testing.jpg?alt=media&token=d8be8a9d-680b-41f0-81eb-522b7e8c00a7'
   },
   {
@@ -409,5 +409,17 @@ module.exports.default = [
     scale: 3,
     link: 'https://github.com/romelperez/calculador-matematico',
     image: 'https://firebasestorage.googleapis.com/v0/b/romelperez-qw74.appspot.com/o/projects%2Fcalculador-matematico.jpg?alt=media&token=c8e679da-485d-41c8-943f-be6b2c3b2b99'
+  },
+  {
+    id: 'ad244d37-f0cd-444e-8abf-bf3309793446',
+    private: false,
+    name: 'CSS in JS with JSS and React',
+    description: '',
+    date: '2018-02-27',
+    lang: 'en',
+    type: 'talk',
+    scale: 2,
+    link: '/talks/css-in-js-with-jss-and-react',
+    image: ''
   }
 ];
