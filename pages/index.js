@@ -2,6 +2,7 @@ import React from 'react';
 import {
   withStyles,
   Arwes,
+  Content,
   Words,
   Image,
   Button,
@@ -123,7 +124,7 @@ class Index extends React.Component {
           pattern={pattern}
         >
           {anim => (
-          <div className={classes.root}>
+          <Content className={classes.root}>
 
             <div className={classes.content}>
 
@@ -187,7 +188,7 @@ class Index extends React.Component {
 
             </div>
 
-          </div>
+          </Content>
           )}
         </Arwes>
       </div>

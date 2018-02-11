@@ -1,0 +1,14 @@
+{
+  "id": "be77c4d8-9bb7-4686-87f1-9c04fc1d07a5",
+  "name": "CSS in JS with JSS and React",
+  "slides": [
+    {
+      "children": [
+        {
+          "element": "Text",
+          "children": "CSS in JS with JSS and React"
+        }
+      ]
+    }
+  ]
+}

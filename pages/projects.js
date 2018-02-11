@@ -2,7 +2,7 @@ import React from 'react';
 import cx from 'classnames';
 import moment from 'moment';
 import emergence from 'emergence.js';
-import { withStyles, Arwes, Row, Appear, Words } from 'arwes';
+import { withStyles, Arwes, Content, Row, Appear, Words } from 'arwes';
 
 import { projects } from '../site/settings';
 import withTemplate from '../site/withTemplate';
@@ -90,70 +90,72 @@ class Projects extends React.Component {
       >
         {anim => (
         <div className={classes.root} ref={el => (this.rootEl = el)}>
+          <Content>
 
-          <Header
-            animate
-            show={anim.entered}
-            animation={{
-              onEntered: () => this.setState({ animLvl1: true })
-            }}
-            onLink={this.onLink}
-          />
+            <Header
+              animate
+              show={anim.entered}
+              animation={{
+                onEntered: () => this.setState({ animLvl1: true })
+              }}
+              onLink={this.onLink}
+            />
 
-          <div className={classes.main}>
-            <Wrap>
-              <Row col s={12}>
+            <div className={classes.main}>
+              <Wrap>
+                <Row col s={12}>
 
-                <h2>
-                  <Appear
-                    className='mdi mdi-chevron-double-right'
-                    animate
-                    show={animLvl1}
-                    animation={{
-                      onEntered: () => this.setState({ animLvl2: true })
-                    }}
-                  />
-                  {' '}
-                  <Words animate show={animLvl1}>Projects</Words>
-                  <Appear className={cx(classes.titleRight, 'mdi mdi-chevron-double-left')} animate show={animLvl1} />
-                </h2>
+                  <h2>
+                    <Appear
+                      className='mdi mdi-chevron-double-right'
+                      animate
+                      show={animLvl1}
+                      animation={{
+                        onEntered: () => this.setState({ animLvl2: true })
+                      }}
+                    />
+                    {' '}
+                    <Words animate show={animLvl1}>Projects</Words>
+                    <Appear className={cx(classes.titleRight, 'mdi mdi-chevron-double-left')} animate show={animLvl1} />
+                  </h2>
 
-              </Row>
-              <Row col noMargin s={12}>
+                </Row>
+                <Row col noMargin s={12}>
 
-                {list.map((project, index) => (
-                <Link
-                  key={project.id}
-                  className={classes.project}
-                  href={project.link}
-                  onLink={this.onLink}
-                  data-index={index}
-                  data-emergence='hidden'
-                >
-                  <Project
-                    show={index <= shownIndex && animLvl2}
-                    headerSize='h3'
-                    header={project.name}
-                    description={project.description}
-                    type={project.type}
-                    scale={project.scale}
-                    lang={project.lang}
-                    date={moment(project.date).format('YYYY-MM')}
-                    image={project.image}
-                  />
-                </Link>
-                ))}
+                  {list.map((project, index) => (
+                  <Link
+                    key={project.id}
+                    className={classes.project}
+                    href={project.link}
+                    onLink={this.onLink}
+                    data-index={index}
+                    data-emergence='hidden'
+                  >
+                    <Project
+                      show={index <= shownIndex && animLvl2}
+                      headerSize='h3'
+                      header={project.name}
+                      description={project.description}
+                      type={project.type}
+                      scale={project.scale}
+                      lang={project.lang}
+                      date={moment(project.date).format('YYYY-MM')}
+                      image={project.image}
+                    />
+                  </Link>
+                  ))}
 
-              </Row>
-            </Wrap>
-          </div>
+                </Row>
+              </Wrap>
+            </div>
 
-          <Footer
-            animate
-            show={anim.entered}
-            onLink={this.onLink}
-          />
+            <Footer
+              animate
+              show={anim.entered}
+              onLink={this.onLink}
+            />
 
+          </Content>
         </div>
         )}
       </Arwes>

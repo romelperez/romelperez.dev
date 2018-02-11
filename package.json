@@ -6,7 +6,7 @@
   "license": "GNUv3",
   "private": true,
   "scripts": {
-    "dev": "next -p 7000",
+    "dev": "node server.js",
     "build": "next build",
     "start": "next start -p 7000",
     "deploy": "pm2 startOrRestart deploy.json --env production"
@@ -18,12 +18,15 @@
     "babel-preset-stage-1": "^6.24.1",
     "classnames": "^2.2.5",
     "emergence.js": "^1.1.2",
+    "express": "^4.16.2",
     "moment": "^2.20.1",
     "next": "^4.2.3",
+    "next-routes": "^1.2.0",
     "polished": "^1.9.0",
     "react": "^16.2.0",
     "react-dom": "^16.2.0",
-    "react-ga": "^2.4.1"
+    "react-ga": "^2.4.1",
+    "spectacle": "^4.0.5"
   },
   "devDependencies": {
     "babel-eslint": "^8.2.1",
