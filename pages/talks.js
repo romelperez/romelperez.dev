@@ -153,14 +153,14 @@ class Talks extends React.Component {
     const theme = createTheme(createAppTheme({
       typography: {
         headerSizes: {
-          h1: 42,
-          h2: 40,
-          h3: 38,
-          h4: 32,
+          h1: 56,
+          h2: 46,
+          h3: 42,
+          h4: 36,
           h5: 28,
           h6: 24,
         },
-        fontSize: 30,
+        fontSize: 36,
       },
       code: {
         fontSize: 26,
