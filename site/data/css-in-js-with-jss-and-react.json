@@ -3,12 +3,63 @@
   "name": "CSS in JS with JSS and React",
   "slides": [
     {
-      "children": [
-        {
-          "element": "Text",
-          "children": "CSS in JS with JSS and React"
-        }
-      ]
+      "children": [{
+        "element": "Heading",
+        "props": { "node": "h1" },
+        "children": "CSS in JS with JSS and React"
+      }, {
+        "element": "Paragraph",
+        "children": "Style scalable web applications with the CSS in JavaScript implementation JSS using ReactJS components."
+      }]
+    },
+    {
+      "children": [{
+        "element": "Heading",
+        "props": { "node": "h2" },
+        "children": "CSS at Scale"
+      }]
+    },
+    {
+      "children": [{
+        "element": "Heading",
+        "props": { "node": "h2" },
+        "children": "CSS Enhancing Tools"
+      }]
+    },
+    {
+      "children": [{
+        "element": "Heading",
+        "props": { "node": "h2" },
+        "children": "Styling from JavaScript"
+      }]
+    },
+    {
+      "children": [{
+        "element": "Heading",
+        "props": { "node": "h2" },
+        "children": "CSS in JavaScript implementations"
+      }]
+    },
+    {
+      "children": [{
+        "element": "Heading",
+        "props": { "node": "h2" },
+        "children": "JSS"
+      }]
+    },
+    {
+      "children": [{
+        "element": "Heading",
+        "props": { "node": "h2" },
+        "children": "JSS in React"
+      }]
+    },
+    {
+      "children": [{
+        "element": "Heading",
+        "props": { "node": "h2" },
+        "children": "Frameworks"
+      }]
     }
   ]
 }
