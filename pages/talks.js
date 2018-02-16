@@ -1,19 +1,7 @@
 import React from 'react';
 import Router from 'next/router';
-import {
-  withStyles,
-  ThemeProvider,
-  createTheme,
-  Arwes,
-  Appear as ArwesAppear,
-  Words as ArwesWords,
-  Image as ArwesImage,
-  Heading,
-  Paragraph,
-  Link,
-  List,
-  Code
-} from 'arwes';
+import * as arwes from 'arwes';
+import { withStyles, ThemeProvider, createTheme, Arwes } from 'arwes';
 import createSpectacleThemeScreen from 'spectacle/lib/themes/default/screen';
 import createSpectacleThemePrint from 'spectacle/lib/themes/default/print';
 
@@ -21,9 +9,7 @@ import { projects, talks } from '../site/settings';
 import createAppTheme from '../site/createAppTheme';
 import withTemplate from '../site/withTemplate';
 
-let Deck, Slide,
-  Appear, BlockQuote, Cite, CodePane, Fill, Fit,
-  Image, Layout, ListItem, Quote;
+let spectacle, Deck, Slide;
 
 const styles = () => ({
   '@global': {
@@ -46,15 +32,16 @@ class Talks extends React.Component {
 
   constructor () {
     super(...arguments);
+
     this.state = {
-      theme: {},
+      arwesTheme: {},
       spectacleTheme: null,
       animLvl1: false,
     };
   }
 
   componentDidMount () {
-    this.defineTheme();
+    this.defineArwesTheme();
     this.defineSpectacleTheme();
     this.importSpectacle();
 
@@ -73,13 +60,13 @@ class Talks extends React.Component {
     const { talkKey } = this.props.url.query;
     const { classes } = this.props;
 
-    const { theme, spectacleTheme, animLvl1 } = this.state;
+    const { arwesTheme, spectacleTheme, animLvl1 } = this.state;
 
     const project = projects.find(item => item.key === talkKey);
     const talk = project && talks.find(item => item.id === project.talkId);
 
     return (
-      <ThemeProvider theme={theme}>
+      <ThemeProvider theme={arwesTheme}>
         <Arwes
           animate
           show={animLvl1 && !!talk}
@@ -105,52 +92,75 @@ class Talks extends React.Component {
     );
   }
 
-  createElements (elements, key) {
-    return elements.map((item, index) => this.createElement(item, `${key}C${index}`));
+  /**
+   * Conditional importing in the client-side. due to problems in server-side.
+   */
+  importSpectacle () {
+    spectacle = require('spectacle');
+    Deck = spectacle.Deck;
+    Slide = spectacle.Slide;
   }
 
+  /**
+   * Create list of dynamic React components for the presentation.
+   * @param  {Object[]} elements - Array of components definitions.
+   * @param  {String} key - Identifier.
+   * @return {React.Component[]}
+   */
+  createElements (elements, key) {
+    return elements.map((item, index) => this.createElement(item, `${key}${index}`));
+  }
+
+  /**
+   * Create a dynamic React component for the presentation.
+   * @param  {Object|String} opts - The React component properties.
+   * @param  {String} key - Identifier.
+   * @return {React.Component}
+   */
   createElement (opts, key) {
     if (Array.isArray(opts)) {
       return this.createElements(opts, key);
     }
 
     if (typeof opts === 'string') {
-      return <ArwesWords animate>{opts}</ArwesWords>;
+      return <arwes.Words animate>{opts}</arwes.Words>;
     }
 
     const { element, props, children } = opts;
+
     switch (element) {
+      case 'Image': return <arwes.Image key={key} animate {...props} />;
       case 'ImagePlain': return (
-        <ArwesAppear key={key} animate>
-          <Image {...props} />
-        </ArwesAppear>
+        <arwes.Appear key={key} animate>
+          <spectacle.Image {...props} />
+        </arwes.Appear>
       );
-      case 'Image': return (
-        <ArwesImage key={key} animate {...props} />
-      );
-      case 'Heading': return (
-        <Heading key={key} {...props}>{this.createElement(children)}</Heading>
-      );
-      case 'Paragraph': return (
-        <Paragraph key={key} {...props}>{this.createElement(children)}</Paragraph>
-      );
-      case 'Link': return (
-        <Link key={key} {...props}>{this.createElement(children)}</Link>
-      );
-      case 'List': return (
-        <List key={key} {...props}>{this.createElement(children)}</List>
-      );
-      case 'Code': return (
-        <Code key={key} animate {...props}>{children}</Code>
-      );
-      default: return (
-        React.createElement(element, { key, ...props }, this.createElement(children))
+      case 'Code': return <arwes.Code key={key} animate {...props}>{children}</arwes.Code>;
+
+      // General content components.
+      case 'Heading':
+      case 'Paragraph':
+      case 'Link':
+      case 'List': {
+        const SelectedElement = arwes[element];
+        return (
+          <SelectedElement key={key} {...props}>
+            {this.createElement(children)}
+          </SelectedElement>
+        );
+      }
+
+      // A built-in component.
+      default: return React.createElement(
+        element,
+        { key, ...props },
+        this.createElement(children)
       );
     }
   }
 
-  defineTheme () {
-    const theme = createTheme(createAppTheme({
+  defineArwesTheme () {
+    const arwesTheme = createTheme(createAppTheme({
       typography: {
         headerSizes: {
           h1: 56,
@@ -166,11 +176,13 @@ class Talks extends React.Component {
         fontSize: 26,
       },
     }));
-    this.setState({ theme });
+
+    this.setState({ arwesTheme });
   }
 
   defineSpectacleTheme () {
     const { theme } = this.props;
+
     const fonts = {
       primary: theme.background.primary.level0,
       secondary: theme.color.primary.base,
@@ -186,6 +198,7 @@ class Talks extends React.Component {
       screen: createSpectacleThemeScreen(fonts, colors),
       print: createSpectacleThemePrint(),
     };
+
     spectacleTheme.screen = {
       ...spectacleTheme.screen,
       global: {
@@ -205,26 +218,8 @@ class Talks extends React.Component {
         },
       },
     };
-    this.setState({ spectacleTheme });
-  }
 
-  /**
-   * Conditional importing in the client-side. due to problems in server-side.
-   */
-  importSpectacle () {
-    const spectacle = require('spectacle');
-    Deck = spectacle.Deck;
-    Slide = spectacle.Slide;
-    Appear = spectacle.Appear;
-    BlockQuote = spectacle.BlockQuote;
-    Cite = spectacle.Cite;
-    CodePane = spectacle.CodePane;
-    Fill = spectacle.Fill;
-    Fit = spectacle.Fit;
-    Image = spectacle.Image;
-    Layout = spectacle.Layout;
-    ListItem = spectacle.ListItem;
-    Quote = spectacle.Quote;
+    this.setState({ spectacleTheme });
   }
 }
 
