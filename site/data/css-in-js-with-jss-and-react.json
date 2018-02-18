@@ -10,6 +10,16 @@
       }, {
         "element": "Paragraph",
         "children": "Style scalable web applications with the CSS in JavaScript implementation JSS using ReactJS components."
+      }, {
+        "element": "Paragraph",
+        "children": [{
+          "element": "span",
+          "children": "Written version: "
+        }, {
+          "element": "Link",
+          "props": { "href": "#", "target": "_blank" },
+          "children": "CSS in JavaScript with JSS and React"
+        }]
       }]
     },
     {
@@ -17,10 +27,51 @@
         "element": "Heading",
         "props": { "node": "h2" },
         "children": "CSS at Scale"
+      }, {
+        "element": "Paragraph",
+        "children": "Let's review some problems when scaling CSS"
+      }]
+    },
+    {
+      "props": { "bgImage": "/static/talks/css-in-js-with-jss-and-react/altavista-2001.png" }
+    },
+    {
+      "children": [{
+        "element": "Heading",
+        "props": { "node": "h3" },
+        "children": "Times Have Changed"
+      }, {
+        "element": "Paragraph",
+        "children": "Nowadays we have web applications with complex user interactions evolving everyday"
       }]
     },
     {
       "children": [{
+        "element": "Heading",
+        "props": { "node": "h3" },
+        "children": "Problems of CSS at Scale"
+      }, {
+        "element": "List",
+        "children": [{
+          "element": "li",
+          "children": "Modularity - global namespacing, overuse of specificity"
+        }, {
+          "element": "li",
+          "children": "Theming - dynamic configuration"
+        }, {
+          "element": "li",
+          "children": "Publishing - preprocessors, build tools and conflicts"
+        }, {
+          "element": "li",
+          "children": "And more..."
+        }]
+      }]
+    },
+    {
+      "children": [{
+        "element": "ImagePlain",
+        "props": { "src": "/static/talks/css-in-js-with-jss-and-react/css-enhancing-tools.png" }
+      }, {
         "element": "Heading",
         "props": { "node": "h2" },
         "children": "CSS Enhancing Tools"
@@ -28,27 +79,19 @@
     },
     {
       "children": [{
+        "element": "ImagePlain",
+        "props": { "src": "/static/talks/css-in-js-with-jss-and-react/technologies.png" }
+      }, {
         "element": "Heading",
         "props": { "node": "h2" },
-        "children": "Styling from JavaScript"
+        "children": "CSS in JavaScript"
       }]
     },
     {
       "children": [{
-        "element": "Heading",
-        "props": { "node": "h2" },
-        "children": "CSS in JavaScript implementations"
-      }]
-    },
-    {
-      "children": [{
-        "element": "Heading",
-        "props": { "node": "h2" },
-        "children": "JSS"
-      }]
-    },
-    {
-      "children": [{
+        "element": "ImagePlain",
+        "props": { "src": "/static/talks/css-in-js-with-jss-and-react/jss-and-react.png" }
+      }, {
         "element": "Heading",
         "props": { "node": "h2" },
         "children": "JSS in React"
@@ -56,9 +99,62 @@
     },
     {
       "children": [{
+        "element": "Code",
+        "props": { "type": "pre", "language": "javascript" },
+        "children": "import jss from 'jss';\nimport preset from 'jss-preset-default';\njss.setup(preset());\nconst styles = {\n  button: {\n    background: 'red',\n    color: 'white',\n    fontSize: 12\n  },\n  ctaButton: {\n    composes: '$button',\n    background: 'blue',\n    fontWeight: 'bold'\n  }\n};\nconst { classes } = jss.createStyleSheet(styles).attach();\ndocument.body.innerHTML = `\n  <button class=\"${classes.button}\">Button</button>\n  <button class=\"${classes.ctaButton}\">CTA Button</button>\n`;"
+      }]
+    },
+    {
+      "props": { "bgImage": "/static/talks/css-in-js-with-jss-and-react/cssinjs-1.png" }
+    },
+    {
+      "children": [{
+        "element": "Code",
+        "props": { "type": "pre", "language": "javascript" },
+        "children": "// index.js\nimport { ThemeProvider } from 'react-jss';\nimport Button from './Button';\nconst mainTheme = {\n  colorPrimary: 'blue',\n  colorActive: 'red'\n};\nconst App = () => (\n  <ThemeProvider theme={mainTheme}>\n    <div>\n      <Button>Button</Button>\n      <Button active>Active Button</Button>\n    </div>\n  </ThemeProvider>\n)\n"
+      }]
+    },
+    {
+      "children": [{
+        "element": "Code",
+        "props": { "type": "pre", "language": "javascript" },
+        "children": "// Button.js\nimport React from 'react';\nimport withStyles from 'react-jss';\nimport cx from 'classnames';\nconst styles = theme => ({\n  root: {\n    background: theme.colorPrimary,\n    color: 'white',\n    fontSize: 16\n  },\n  active: {\n    background: theme.colorActive,\n    fontWeight: 'bold'\n  }\n});\nclass Button extends React.Component {\n  render () {\n    const { classes, theme, className, children, active, ...etc } = this.props;\n    const cls = cx(\n      classes.root,\n      active && classes.active,\n      className\n    );\n    return (\n      <button className={cls} {...etc}>\n        {children}\n      </button>\n    );\n  }\n}\nexport default withStyles(styles)(Button);\n"
+      }]
+    },
+    {
+      "props": { "bgImage": "/static/talks/css-in-js-with-jss-and-react/cssinjs-2.png" }
+    },
+    {
+      "children": [{
+        "element": "Code",
+        "props": { "type": "pre", "language": "javascript" },
+        "children": "const styles = theme => ({\n  root: {\n    color: 'white',\n    fontSize: 16,\n    background: props => props.active\n      ? theme.colorActive\n      : theme.colorPrimary,\n    fontWeight: props => props.active && 'bold'\n  }\n});\nclass Button extends React.Component {\n  render () {\n    const { classes, theme, className, children, active, ...etc } = this.props;\n    const cls = cx(classes.root, className);\n    return (\n      <button className={cls} {...etc}>\n        {children}\n      </button>\n    );\n  }\n}"
+      }]
+    },
+    {
+      "children": [{
         "element": "Heading",
         "props": { "node": "h2" },
-        "children": "Frameworks"
+        "children": "UI Frameworks"
+      }]
+    },
+    {
+      "props": { "bgImage": "/static/talks/css-in-js-with-jss-and-react/material-ui.png" }
+    },
+    {
+      "props": { "bgImage": "/static/talks/css-in-js-with-jss-and-react/arwes.jpg" }
+    },
+    {
+      "children": [{
+        "element": "Paragraph",
+        "children": [{
+          "element": "span",
+          "children": "Creado por "
+        }, {
+          "element": "Link",
+          "props": { "href": "/" },
+          "children": "Romel Pérez"
+        }]
       }]
     }
   ]
