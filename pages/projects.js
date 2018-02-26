@@ -127,6 +127,7 @@ class Projects extends React.Component {
                     key={project.id}
                     className={classes.project}
                     href={project.link}
+                    target='_target'
                     onLink={this.onLink}
                     data-index={index}
                     data-emergence='hidden'
