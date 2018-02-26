@@ -415,7 +415,6 @@
   {
     "id": "ad244d37-f0cd-444e-8abf-bf3309793446",
     "talkId": "be77c4d8-9bb7-4686-87f1-9c04fc1d07a5",
-    "private": true,
     "name": "CSS in JS with JSS and React",
     "key": "css-in-js-with-jss-and-react",
     "description": "Style scalable web applications with the CSS in JavaScript implementation JSS using ReactJS components.",
@@ -424,6 +423,6 @@
     "type": "talk",
     "scale": 2,
     "link": "/talks/css-in-js-with-jss-and-react",
-    "image": ""
+    "image": "https://firebasestorage.googleapis.com/v0/b/romelperez-qw74.appspot.com/o/projects%2Fcss-in-js-with-jss-and-react.jpg?alt=media&token=090711d3-5a43-4309-a400-735eac83aa10"
   }
 ]
