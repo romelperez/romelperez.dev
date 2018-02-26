@@ -1,8 +1,7 @@
 {
   "apps": {
     "name": "romelperez",
-    "script": "./node_modules/.bin/next",
-    "args": ["start", "-p", "7000"],
+    "script": "server.js",
     "max_memory_restart": "300M",
     "instances" : 0,
     "exec_mode" : "cluster",

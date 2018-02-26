@@ -8,7 +8,7 @@
   "scripts": {
     "dev": "node server.js",
     "build": "next build",
-    "start": "next start -p 7000",
+    "start": "NODE_ENV=production node server.js",
     "deploy": "pm2 startOrRestart deploy.json --env production"
   },
   "dependencies": {
