@@ -25,7 +25,11 @@ const styles = () => ({
     right: 0,
     bottom: 0,
     overflow: 'hidden',
-  }
+  },
+  codeBlock: {
+    margin: 0,
+    maxHeight: 700,
+  },
 });
 
 class Talks extends React.Component {
@@ -118,6 +122,8 @@ class Talks extends React.Component {
    * @return {React.Component}
    */
   createElement (opts, key) {
+    const { classes } = this.props;
+
     if (Array.isArray(opts)) {
       return this.createElements(opts, key);
     }
@@ -135,11 +141,21 @@ class Talks extends React.Component {
           <spectacle.Image {...props} />
         </arwes.Appear>
       );
-      case 'Code': return <arwes.Code key={key} animate {...props}>{children}</arwes.Code>;
+      case 'Code': return (
+        <arwes.Code
+          className={classes.codeBlock}
+          key={key}
+          animate
+          {...props}
+        >
+          {children}
+        </arwes.Code>
+      );
 
       // General content components.
       case 'Heading':
       case 'Paragraph':
+      case 'Blockquote':
       case 'Link':
       case 'List': {
         const SelectedElement = arwes[element];
