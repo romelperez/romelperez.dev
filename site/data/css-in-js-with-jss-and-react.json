@@ -20,7 +20,7 @@
           "children": "Written version: "
         }, {
           "element": "Link",
-          "props": { "href": "https://medium.com/@romelperez/54cdd2720222", "target": "_blank" },
+          "props": { "href": "https://medium.com/jobsity/css-in-javascript-with-jss-and-react-54cdd2720222", "target": "_blank" },
           "children": "CSS in JavaScript with JSS and React"
         }]
       }]
