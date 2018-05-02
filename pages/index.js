@@ -155,9 +155,9 @@ class Index extends React.Component {
                 <Link className={classes.detail} href='https://www.linkedin.com/in/romelperez' target='linkedin' onLink={this.onLink}>
                   <TextIcon className={classes.textIcon} show={anim.entered} icon='code-brackets'>Frontend Engineer</TextIcon>
                 </Link>
-                <Link className={classes.detail} href='https://jobsity.com' target='_blank' onLink={this.onLink}>
-                  <TextIcon className={classes.textIcon} show={anim.entered} icon='briefcase-outline'>Jobsity</TextIcon>
-                </Link>
+                {/*<Link className={classes.detail} href='https://x.com' target='_blank' onLink={this.onLink}>
+                  <TextIcon className={classes.textIcon} show={anim.entered} icon='briefcase-outline'>X</TextIcon>
+                </Link>*/}
                 <Link className={classes.detail} href='https://www.google.com.co/maps/place/Medellin' target='_blank' onLink={this.onLink}>
                   <TextIcon className={classes.textIcon} show={anim.entered} icon='map-marker-outline'>Medellin</TextIcon>
                 </Link>
