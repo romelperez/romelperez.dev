@@ -21,9 +21,6 @@
       "props": { "bgImage": "/static/talks/carrera-open-source/hobby.jpg" }
     },
     {
-      "props": { "bgImage": "/static/talks/carrera-open-source/prhone_trabajo_pic.jpg" }
-    },
-    {
       "props": { "bgImage": "/static/talks/carrera-open-source/internet.jpg" }
     },
     {
@@ -44,7 +41,7 @@
     {
       "children": [{
         "element": "Heading",
-        "children": "El open source y la carrera profesional"
+        "children": "El open source y tu carrera profesional"
       }]
     },
     {
@@ -92,7 +89,10 @@
     {
       "children": [{
         "element": "Heading",
-        "children": "¿Cómo le entro?"
+        "children": "¡Quiero hacerlo!"
+      }, {
+        "element": "Heading",
+        "children": "¿Qué me recomiendas?"
       }]
     },
     {
@@ -103,7 +103,7 @@
             "fontSize": "160px"
           }
         },
-        "children": "Step 1"
+        "children": "[1]"
       }, {
         "element": "Heading",
         "children": "Estudia y practica todo lo que puedas"
@@ -117,7 +117,7 @@
             "fontSize": "160px"
           }
         },
-        "children": "Step 2"
+        "children": "[2]"
       }, {
         "element": "Heading",
         "children": "Aprende Inglés"
@@ -131,7 +131,7 @@
             "fontSize": "160px"
           }
         },
-        "children": "Step 3"
+        "children": "[3]"
       }, {
         "element": "Heading",
         "children": "Cultiva “soft skills”"
@@ -145,7 +145,7 @@
             "fontSize": "160px"
           }
         },
-        "children": "Step 4"
+        "children": "[4]"
       }, {
         "element": "Heading",
         "children": "Comparte tu experiencia"
@@ -159,10 +159,16 @@
             "fontSize": "160px"
           }
         },
-        "children": "Step 5"
+        "children": "[5]"
       }, {
         "element": "Heading",
         "children": "Participa en comunidades"
+      }]
+    },
+    {
+      "children": [{
+        "element": "Heading",
+        "children": "...Repite"
       }]
     },
     {
@@ -185,6 +191,20 @@
       }, {
         "element": "ImagePlain",
         "props": { "src": "/static/talks/carrera-open-source/heart.gif" }
+      }]
+    },
+    {
+      "children": [{
+        "element": "Link",
+        "props": {
+          "href": "https://romelperez.com",
+          "target": "_blank",
+          "style": {
+            "fontSize": "80px",
+            "fontWeight": "bold"
+          }
+        },
+        "children": "RomelPerez.com"
       }]
     }
   ]
