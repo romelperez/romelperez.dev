@@ -424,5 +424,17 @@
     "scale": 2,
     "link": "/talks/css-in-js-with-jss-and-react",
     "image": "https://firebasestorage.googleapis.com/v0/b/romelperez-qw74.appspot.com/o/projects%2Fcss-in-js-with-jss-and-react.jpg?alt=media&token=090711d3-5a43-4309-a400-735eac83aa10"
+  },
+  {
+    "id": "8d218d6b-3c63-4af4-bcd2-ec1d987f27dd",
+    "talkId": "04795e7b-37f1-4459-93e2-0a4fe4ab0e13",
+    "name": "Cómo iniciar tu carrera en la programación con open source",
+    "key": "open-source-career",
+    "description": "Comparto mi experiencia en la tecnología como desarrollador de software y cómo he podido hacer una carrera profesional principalmente con una cultura de contenidos abiertos.",
+    "date": "2018-06-08",
+    "lang": "es",
+    "type": "talk",
+    "scale": 1,
+    "link": "/talks/open-source-career"
   }
 ]
