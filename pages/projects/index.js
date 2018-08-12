@@ -130,8 +130,8 @@ class Projects extends React.Component {
                     key={project.id}
                     className={classes.project}
                     href={project.link}
-                    target={(/^\/.+/).test(project.link) ? '' : '_blank'}
                     onLink={this.onLink}
+                    target='_blank'
                     data-index={index}
                     data-emergence='hidden'
                   >
