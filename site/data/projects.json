@@ -7,6 +7,7 @@
     "lang": "es",
     "type": "code",
     "scale": 3,
+    "at": "ITILGC, Aguachica",
     "link": "http://comunidad-itilgc.com",
     "image": "https://firebasestorage.googleapis.com/v0/b/romelperez-qw74.appspot.com/o/projects%2Fcomunidadlaureanista.jpg?alt=media&token=4f27a513-4375-42d5-995c-3fd3974f2792"
   },
@@ -29,6 +30,7 @@
     "lang": "es",
     "type": "code",
     "scale": 3,
+    "at": "Calumet, Bucaramanga",
     "link": "http://cormoran.uis.edu.co/eisi/Calumet/Estandar"
   },
   {
@@ -39,6 +41,7 @@
     "lang": "es",
     "type": "code",
     "scale": 3,
+    "at": "GRI S.A.S., Bucaramanga",
     "link": "http://grigestion.co",
     "image": "https://firebasestorage.googleapis.com/v0/b/romelperez-qw74.appspot.com/o/projects%2Fgrisas-website.jpg?alt=media&token=0cfb540c-e6ef-42a8-acfa-716a90a96816"
   },
@@ -50,6 +53,7 @@
     "lang": "es",
     "type": "code",
     "scale": 3,
+    "at": "Calumet, Bucaramanga",
     "link": "https://github.com/calumet/clima-cliente",
     "image": "https://firebasestorage.googleapis.com/v0/b/romelperez-qw74.appspot.com/o/projects%2Fcalumet-weather.jpg?alt=media&token=648d175f-af1c-49d7-9b46-e9e15cd32bb6"
   },
@@ -61,6 +65,7 @@
     "lang": "es",
     "type": "guide",
     "scale": 3,
+    "at": "Calumet, Bucaramanga",
     "link": "http://cormoran.uis.edu.co/eisi/Calumet/Estandar",
     "image": "https://firebasestorage.googleapis.com/v0/b/romelperez-qw74.appspot.com/o/projects%2Fcalumet-estandar.jpg?alt=media&token=8505547d-d83b-4a60-b6a8-0182aa38fbab"
   },
@@ -82,6 +87,7 @@
     "lang": "es",
     "type": "talk",
     "scale": 2,
+    "at": "UIS, Bucaramanga",
     "link": "https://github.com/calumet/aprender",
     "image": "https://firebasestorage.googleapis.com/v0/b/romelperez-qw74.appspot.com/o/projects%2Fcalumet-aprender.jpg?alt=media&token=e92c512c-2cad-43b3-b95a-1d49bd088930"
   },
@@ -93,6 +99,7 @@
     "lang": "es",
     "type": "talk",
     "scale": 2,
+    "at": "Coworking Labs, Bucaramanga",
     "link": "http://www.meetup.com/BucaramangaJS/events/226728738/",
     "image": "https://firebasestorage.googleapis.com/v0/b/romelperez-qw74.appspot.com/o/projects%2Fbucaramangajs-v1-jspromises.jpg?alt=media&token=73cc48fa-cd0f-4b13-ab10-56460b92a442"
   },
@@ -104,6 +111,7 @@
     "lang": "es",
     "type": "talk",
     "scale": 2,
+    "at": "MediosTIC, Bucaramanga",
     "link": "http://www.meetup.com/BucaramangaJS/events/228227734/",
     "image": "https://firebasestorage.googleapis.com/v0/b/romelperez-qw74.appspot.com/o/projects%2Fbucaramangajs-v2-frontend.jpg?alt=media&token=24393886-99a9-499f-8de5-d84a39aee30f"
   },
@@ -175,7 +183,8 @@
     "lang": "es",
     "type": "talk",
     "scale": 2,
-    "link": "/talks/polymer",
+    "at": "MediosTIC, Bucaramanga",
+    "link": "/talks/introduccion-polymer",
     "image": "https://firebasestorage.googleapis.com/v0/b/romelperez-qw74.appspot.com/o/projects%2Fbucaramangajs-v3-polymer.jpg?alt=media&token=c7e03a28-b3f0-4d52-8a52-5f70dab0adcf"
   },
   {
@@ -216,7 +225,8 @@
     "lang": "es",
     "type": "talk",
     "scale": 2,
-    "link": "/talks/websocket",
+    "at": "MediosTIC, Bucaramanga",
+    "link": "/talks/realtime-websockets",
     "image": "https://firebasestorage.googleapis.com/v0/b/romelperez-qw74.appspot.com/o/projects%2Fbucaramangajs-v4-realtime.jpg?alt=media&token=72f14133-3e63-4e6b-aa5d-767ed13702ed"
   },
   {
@@ -227,6 +237,7 @@
     "lang": "es",
     "type": "code",
     "scale": 3,
+    "at": "UIS, Bucaramanga",
     "link": "https://github.com/calumet/realtime",
     "image": "https://firebasestorage.googleapis.com/v0/b/romelperez-qw74.appspot.com/o/projects%2Fcalumet-realtime.jpg?alt=media&token=c5874f86-e324-4d35-9271-520cf7b21ac8"
   },
@@ -248,6 +259,7 @@
     "lang": "es",
     "type": "talk",
     "scale": 2,
+    "at": "MediosTIC, Bucaramanga",
     "link": "/talks/chrome-devtools",
     "image": "https://firebasestorage.googleapis.com/v0/b/romelperez-qw74.appspot.com/o/projects%2Fbucaramangajs-v5-devtools.jpg?alt=media&token=b3222db7-529c-4a29-8aee-0ee17699dabc"
   },
@@ -259,6 +271,7 @@
     "lang": "es",
     "type": "code",
     "scale": 3,
+    "at": "MediosTIC, Bucaramanga",
     "link": "http://asiste.com.co",
     "image": "https://firebasestorage.googleapis.com/v0/b/romelperez-qw74.appspot.com/o/projects%2Fmediostic-asiste.jpg?alt=media&token=68030ad2-a6c6-4aec-b138-5746aeea1eba"
   },
@@ -270,6 +283,7 @@
     "lang": "es",
     "type": "code",
     "scale": 2,
+    "at": "Bucaramanga",
     "link": "http://bucaramangajs.org",
     "image": "https://firebasestorage.googleapis.com/v0/b/romelperez-qw74.appspot.com/o/projects%2Fbucaramangajs.org.jpg?alt=media&token=7e5ce4fa-4246-47cc-b00e-f789aa899335"
   },
@@ -282,11 +296,11 @@
     "lang": "es",
     "type": "code",
     "scale": 1,
+    "at": "Bucaramanga",
     "link": "http://katherinenavarro.com"
   },
   {
     "id": "b66fe806-9d85-40ef-949a-4521dd26b1e1",
-    "talkId": "84977112-389f-43c1-ab8a-48bbdd67d8e1",
     "name": "Testing in JavaScript with Mocha and Chai",
     "key": "testing-javascript",
     "description": "Talk and walkthrough about software testing in web applications based in JavaScript with Mocha and Chai. The tutorial is focused on unit testing using the methodology Behaviour-Driven Development (BDD) on Node.js.",
@@ -294,7 +308,8 @@
     "lang": "es",
     "type": "talk",
     "scale": 2,
-    "link": "/talks/testing-javascript",
+    "at": "MediosTIC, Bucaramanga",
+    "link": "/talks/testing-javascript-mocha-chai",
     "image": "https://firebasestorage.googleapis.com/v0/b/romelperez-qw74.appspot.com/o/projects%2Fbucaramangajs-v8-testing.jpg?alt=media&token=d8be8a9d-680b-41f0-81eb-522b7e8c00a7"
   },
   {
@@ -340,6 +355,7 @@
     "lang": "es",
     "type": "code",
     "scale": 3,
+    "at": "MediosTIC, Bucaramanga",
     "link": "https://emar.mediostic.com",
     "image": "https://firebasestorage.googleapis.com/v0/b/romelperez-qw74.appspot.com/o/projects%2Fmediostic-emar.jpg?alt=media&token=e8bacdf0-343b-4ebf-9e2e-48465870ab9c"
   },
@@ -351,6 +367,7 @@
     "lang": "es",
     "type": "code",
     "scale": 3,
+    "at": "MediosTIC, Bucaramanga",
     "link": "https://premium.ciudademprendedora.com.co"
   },
   {
@@ -398,6 +415,7 @@
     "lang": "es",
     "type": "code",
     "scale": 3,
+    "at": "ITILGC, Aguachica",
     "link": "https://github.com/romelperez/sirena-autocontrolada",
     "image": "https://firebasestorage.googleapis.com/v0/b/romelperez-qw74.appspot.com/o/projects%2Fsirena-autocontrolada-itilgc.jpg?alt=media&token=7aac3353-6868-4448-b7ba-60179466af65"
   },
@@ -409,32 +427,59 @@
     "lang": "es",
     "type": "code",
     "scale": 3,
+    "at": "ITILGC, Aguachica",
     "link": "https://github.com/romelperez/calculador-matematico",
     "image": "https://firebasestorage.googleapis.com/v0/b/romelperez-qw74.appspot.com/o/projects%2Fcalculador-matematico.jpg?alt=media&token=c8e679da-485d-41c8-943f-be6b2c3b2b99"
   },
   {
     "id": "ad244d37-f0cd-444e-8abf-bf3309793446",
-    "talkId": "be77c4d8-9bb7-4686-87f1-9c04fc1d07a5",
-    "name": "CSS in JS with JSS and React",
-    "key": "css-in-js-with-jss-and-react",
+    "name": "CSS in JS with JSS and React at Jobsity",
     "description": "Style scalable web applications with the CSS in JavaScript implementation JSS using ReactJS components.",
     "date": "2018-02-27",
     "lang": "en",
     "type": "talk",
     "scale": 2,
+    "at": "Jobsity, Medellin",
     "link": "/talks/css-in-js-with-jss-and-react",
+    "image": "https://firebasestorage.googleapis.com/v0/b/romelperez-qw74.appspot.com/o/projects%2Fcss-in-js-with-jss-and-react-jobsity.png?alt=media&token=8a519a37-2172-4549-b955-1138a4702dd1"
+  },
+  {
+    "id": "13c4a4cf-b139-44ff-8309-53f9c51dc391",
+    "name": "CSS in JS with JSS and React",
+    "description": "Style scalable web applications with the CSS in JavaScript implementation JSS using ReactJS components.",
+    "date": "2018-02-26",
+    "lang": "en",
+    "type": "guide",
+    "scale": 3,
+    "link": "https://medium.com/jobsity/css-in-javascript-with-jss-and-react-54cdd2720222",
     "image": "https://firebasestorage.googleapis.com/v0/b/romelperez-qw74.appspot.com/o/projects%2Fcss-in-js-with-jss-and-react.jpg?alt=media&token=090711d3-5a43-4309-a400-735eac83aa10"
   },
   {
+    "id": "971a0a1b-e8ac-4616-94d9-a301808f9ed2",
+    "private": true,
+    "name": "Admire Standards"
+  },
+  {
     "id": "8d218d6b-3c63-4af4-bcd2-ec1d987f27dd",
-    "talkId": "04795e7b-37f1-4459-93e2-0a4fe4ab0e13",
     "name": "Cómo iniciar tu carrera en la programación con open source",
-    "key": "open-source-career",
     "description": "Comparto mi experiencia en la tecnología como desarrollador de software y cómo he podido hacer una carrera profesional principalmente con una cultura de contenidos abiertos.",
     "date": "2018-06-08",
     "lang": "es",
     "type": "talk",
     "scale": 1,
-    "link": "/talks/open-source-career"
+    "at": "Hackdóconf, Quibdó",
+    "link": "/talks/carrera-open-source",
+    "image": "https://firebasestorage.googleapis.com/v0/b/romelperez-qw74.appspot.com/o/projects%2Fopen-source-career.jpg?alt=media&token=169eeb78-2c9b-4e29-8584-c1a0ab96ebb8"
+  },
+  {
+    "id": "dab16220-2d6c-436a-8b17-f216e9116000",
+    "private": true,
+    "name": "Testing en JavaScript con Jest",
+    "description": "TODO: To be defined",
+    "date": "2018-08-29",
+    "lang": "es",
+    "type": "talk",
+    "scale": 1,
+    "link": "/talks/testing-javascript-jest"
   }
 ]

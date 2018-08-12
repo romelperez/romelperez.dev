@@ -1,11 +1,9 @@
 {
-  "id": "84977112-389f-43c1-ab8a-48bbdd67d8e1",
-  "name": "Testing in JavaScript with Mocha and Chai",
   "slides": [
     {
       "children": [{
         "element": "ImagePlain",
-        "props": { "src": "/static/talks/testing-javascript/start.png" }
+        "props": { "src": "/static/talks/testing-javascript-mocha-chai/start.png" }
       }, {
         "element": "Heading",
         "children": "Testing en JavaScript con Mocha y Chai"
@@ -15,7 +13,7 @@
       }]
     },
     {
-      "props": { "bgImage": "/static/talks/testing-javascript/analogy.png" }
+      "props": { "bgImage": "/static/talks/testing-javascript-mocha-chai/analogy.png" }
     },
     {
       "children": [{
@@ -27,7 +25,7 @@
     {
       "children": [{
         "element": "ImagePlain",
-        "props": { "src": "/static/talks/testing-javascript/bug.png" }
+        "props": { "src": "/static/talks/testing-javascript-mocha-chai/bug.png" }
       }, {
         "element": "Heading",
         "props": { "node": "h3" },
@@ -50,7 +48,7 @@
     {
       "children": [{
         "element": "ImagePlain",
-        "props": { "src": "/static/talks/testing-javascript/design.png" }
+        "props": { "src": "/static/talks/testing-javascript-mocha-chai/design.png" }
       }, {
         "element": "Heading",
         "props": { "node": "h3" },
@@ -63,7 +61,7 @@
     {
       "children": [{
         "element": "ImagePlain",
-        "props": { "src": "/static/talks/testing-javascript/people.png" }
+        "props": { "src": "/static/talks/testing-javascript-mocha-chai/people.png" }
       }, {
         "element": "Heading",
         "props": { "node": "h3" },
@@ -76,7 +74,7 @@
     {
       "children": [{
         "element": "ImagePlain",
-        "props": { "src": "/static/talks/testing-javascript/quality.png" }
+        "props": { "src": "/static/talks/testing-javascript-mocha-chai/quality.png" }
       }, {
         "element": "Heading",
         "props": { "node": "h3" },
@@ -96,7 +94,7 @@
     {
       "children": [{
         "element": "ImagePlain",
-        "props": { "src": "/static/talks/testing-javascript/complexity.png" }
+        "props": { "src": "/static/talks/testing-javascript-mocha-chai/complexity.png" }
       }, {
         "element": "Heading",
         "props": { "node": "h3" },
@@ -109,7 +107,7 @@
     {
       "children": [{
         "element": "ImagePlain",
-        "props": { "src": "/static/talks/testing-javascript/people.png" }
+        "props": { "src": "/static/talks/testing-javascript-mocha-chai/people.png" }
       }, {
         "element": "Heading",
         "props": { "node": "h3" },
@@ -122,7 +120,7 @@
     {
       "children": [{
         "element": "ImagePlain",
-        "props": { "src": "/static/talks/testing-javascript/time-cost.png" }
+        "props": { "src": "/static/talks/testing-javascript-mocha-chai/time-cost.png" }
       }, {
         "element": "Heading",
         "props": { "node": "h3" },
@@ -133,7 +131,7 @@
       }]
     },
     {
-      "props": { "bgImage": "/static/talks/testing-javascript/software_testing_curve.jpg" }
+      "props": { "bgImage": "/static/talks/testing-javascript-mocha-chai/software_testing_curve.jpg" }
     },
     {
       "children": [{
@@ -145,7 +143,7 @@
     {
       "children": [{
         "element": "ImagePlain",
-        "props": { "src": "/static/talks/testing-javascript/testing.png" }
+        "props": { "src": "/static/talks/testing-javascript-mocha-chai/testing.png" }
       }, {
         "element": "Heading",
         "props": { "node": "h3" },
@@ -168,7 +166,7 @@
     {
       "children": [{
         "element": "ImagePlain",
-        "props": { "src": "/static/talks/testing-javascript/code.png" }
+        "props": { "src": "/static/talks/testing-javascript-mocha-chai/code.png" }
       }, {
         "element": "Heading",
         "props": { "node": "h3" },
@@ -187,7 +185,7 @@
     {
       "children": [{
         "element": "ImagePlain",
-        "props": { "src": "/static/talks/testing-javascript/code.png" }
+        "props": { "src": "/static/talks/testing-javascript-mocha-chai/code.png" }
       }, {
         "element": "Heading",
         "props": { "node": "h3" },
@@ -209,7 +207,7 @@
     {
       "children": [{
         "element": "ImagePlain",
-        "props": { "src": "/static/talks/testing-javascript/unit-testing.png" }
+        "props": { "src": "/static/talks/testing-javascript-mocha-chai/unit-testing.png" }
       }, {
         "element": "Heading",
         "props": { "node": "h3" },
@@ -222,7 +220,7 @@
     {
       "children": [{
         "element": "ImagePlain",
-        "props": { "src": "/static/talks/testing-javascript/integration-testing.png" }
+        "props": { "src": "/static/talks/testing-javascript-mocha-chai/integration-testing.png" }
       }, {
         "element": "Heading",
         "props": { "node": "h3" },
@@ -235,7 +233,7 @@
     {
       "children": [{
         "element": "ImagePlain",
-        "props": { "src": "/static/talks/testing-javascript/system-testing.png" }
+        "props": { "src": "/static/talks/testing-javascript-mocha-chai/system-testing.png" }
       }, {
         "element": "Heading",
         "props": { "node": "h3" },
@@ -248,7 +246,7 @@
     {
       "children": [{
         "element": "ImagePlain",
-        "props": { "src": "/static/talks/testing-javascript/code.png" }
+        "props": { "src": "/static/talks/testing-javascript-mocha-chai/code.png" }
       }, {
         "element": "Heading",
         "props": { "node": "h3" },
@@ -280,7 +278,7 @@
     {
       "children": [{
         "element": "ImagePlain",
-        "props": { "src": "/static/talks/testing-javascript/automatization.png" }
+        "props": { "src": "/static/talks/testing-javascript-mocha-chai/automatization.png" }
       }, {
         "element": "Heading",
         "props": { "node": "h3" },
@@ -293,7 +291,7 @@
     {
       "children": [{
         "element": "ImagePlain",
-        "props": { "src": "/static/talks/testing-javascript/tdd.png" }
+        "props": { "src": "/static/talks/testing-javascript-mocha-chai/tdd.png" }
       }, {
         "element": "Heading",
         "props": { "node": "h3" },
@@ -318,7 +316,7 @@
     {
       "children": [{
         "element": "ImagePlain",
-        "props": { "src": "/static/talks/testing-javascript/code.png" }
+        "props": { "src": "/static/talks/testing-javascript-mocha-chai/code.png" }
       }, {
         "element": "Heading",
         "props": { "node": "h3" },
@@ -340,7 +338,7 @@
     {
       "children": [{
         "element": "ImagePlain",
-        "props": { "src": "/static/talks/testing-javascript/mochajs.png" }
+        "props": { "src": "/static/talks/testing-javascript-mocha-chai/mochajs.png" }
       }, {
         "element": "Heading",
         "props": { "node": "h3" },
@@ -395,7 +393,7 @@
     {
       "children": [{
         "element": "ImagePlain",
-        "props": { "src": "/static/talks/testing-javascript/chaijs.png" }
+        "props": { "src": "/static/talks/testing-javascript-mocha-chai/chaijs.png" }
       }, {
         "element": "Heading",
         "props": { "node": "h3" },
@@ -430,7 +428,7 @@
       }]
     },
     {
-      "props": { "bgImage": "/static/talks/testing-javascript/example1.png" }
+      "props": { "bgImage": "/static/talks/testing-javascript-mocha-chai/example1.png" }
     },
     {
       "children": [{
@@ -444,7 +442,7 @@
       }]
     },
     {
-      "props": { "bgImage": "/static/talks/testing-javascript/example2.png" }
+      "props": { "bgImage": "/static/talks/testing-javascript-mocha-chai/example2.png" }
     },
     {
       "children": [{
@@ -458,7 +456,7 @@
       }]
     },
     {
-      "props": { "bgImage": "/static/talks/testing-javascript/example3.png" }
+      "props": { "bgImage": "/static/talks/testing-javascript-mocha-chai/example3.png" }
     },
     {
       "children": [{
@@ -527,15 +525,16 @@
     },
     {
       "children": [{
-        "element": "Paragraph",
-        "children": [{
-          "element": "span",
-          "children": "Creado por "
-        }, {
-          "element": "Link",
-          "props": { "href": "/" },
-          "children": "Romel Pérez"
-        }]
+        "element": "Link",
+        "props": {
+          "href": "https://romelperez.com",
+          "target": "_blank",
+          "style": {
+            "fontSize": "80px",
+            "fontWeight": "bold"
+          }
+        },
+        "children": "RomelPerez.com"
       }]
     }
   ]

@@ -1,6 +1,4 @@
 {
-  "id": "be77c4d8-9bb7-4686-87f1-9c04fc1d07a5",
-  "name": "CSS in JS with JSS and React",
   "slides": [
     {
       "children": [{
@@ -16,12 +14,16 @@
       }, {
         "element": "Paragraph",
         "children": [{
-          "element": "span",
-          "children": "Written version: "
-        }, {
           "element": "Link",
           "props": { "href": "https://medium.com/jobsity/css-in-javascript-with-jss-and-react-54cdd2720222", "target": "_blank" },
-          "children": "CSS in JavaScript with JSS and React"
+          "children": "Written version"
+        }, {
+          "element": "span",
+          "children": " & "
+        }, {
+          "element": "Link",
+          "props": { "href": "https://www.youtube.com/watch?v=ktitn27MfpI", "target": "_blank" },
+          "children": "Spoken Version"
         }]
       }]
     },
@@ -176,15 +178,16 @@
     },
     {
       "children": [{
-        "element": "Paragraph",
-        "children": [{
-          "element": "span",
-          "children": "By:"
-        }, {
-          "element": "Link",
-          "props": { "href": "/" },
-          "children": "Romel Pérez"
-        }]
+        "element": "Link",
+        "props": {
+          "href": "https://romelperez.com",
+          "target": "_blank",
+          "style": {
+            "fontSize": "80px",
+            "fontWeight": "bold"
+          }
+        },
+        "children": "RomelPerez.com"
       }]
     }
   ]

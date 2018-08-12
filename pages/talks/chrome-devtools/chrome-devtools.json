@@ -1,0 +1,13 @@
+{
+  "slides": [
+    {
+      "children": [{
+        "element": "Heading",
+        "children": "Chrome DevTools"
+      }, {
+        "element": "Paragraph",
+        "children": "TODO: Presentation to be migrated"
+      }]
+    }
+  ]
+}

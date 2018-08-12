@@ -4,9 +4,9 @@ import moment from 'moment';
 import emergence from 'emergence.js';
 import { withStyles, Arwes, Content, Row, Appear, Words } from 'arwes';
 
-import { projects } from '../site/settings';
-import withTemplate from '../site/withTemplate';
-import { Header, Footer, Wrap, Link, Project } from '../site/components';
+import { projects } from '../../site/settings';
+import withTemplate from '../../site/withTemplate';
+import { Header, Footer, Wrap, Link, Project } from '../../site/components';
 
 const styles = theme => ({
   root: {
@@ -15,15 +15,18 @@ const styles = theme => ({
     top: 0,
     right: 0,
     bottom: 0,
-    overflowY: 'auto',
-    display: 'flex',
-    flexDirection: 'column',
     '& $project + $project': {
       marginTop: theme.margin,
     },
   },
+  content: {
+    display: 'flex',
+    flexDirection: 'column',
+    height: '100vh'
+  },
   main: {
     flex: 1,
+    overflowY: 'auto',
     padding: [theme.padding, 0],
     '& h2': {
       margin: 0,
@@ -40,7 +43,7 @@ const styles = theme => ({
 class Projects extends React.Component {
 
   // Reference to main element.
-  rootEl: null;
+  mainEl: null;
 
   constructor () {
     super(...arguments);
@@ -55,7 +58,7 @@ class Projects extends React.Component {
 
   componentDidMount () {
     emergence.init({
-      container: this.rootEl,
+      container: this.mainEl,
       throttle: 200,
       callback: (element, state) => {
         if (state === 'visible') {
@@ -89,8 +92,8 @@ class Projects extends React.Component {
         pattern={resources.pattern}
       >
         {anim => (
-        <div className={classes.root} ref={el => (this.rootEl = el)}>
-          <Content>
+        <div className={classes.root}>
+          <Content className={classes.content}>
 
             <Header
               animate
@@ -101,7 +104,7 @@ class Projects extends React.Component {
               onLink={this.onLink}
             />
 
-            <div className={classes.main}>
+          <div ref={el => (this.mainEl = el)} className={classes.main}>
               <Wrap>
                 <Row col s={12}>
 
@@ -127,7 +130,7 @@ class Projects extends React.Component {
                     key={project.id}
                     className={classes.project}
                     href={project.link}
-                    target='_target'
+                    target={(/^\/.+/).test(project.link) ? '' : '_blank'}
                     onLink={this.onLink}
                     data-index={index}
                     data-emergence='hidden'
@@ -141,6 +144,7 @@ class Projects extends React.Component {
                       scale={project.scale}
                       lang={project.lang}
                       date={moment(project.date).format('YYYY-MM')}
+                      at={project.at}
                       image={project.image}
                     />
                   </Link>

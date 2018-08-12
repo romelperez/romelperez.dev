@@ -31,6 +31,9 @@ const styles = theme => ({
   stats: {
     margin: [0, theme.margin, theme.margin],
   },
+  statsSecondLine: {
+    display: 'block'
+  },
   stat: {
     display: 'inline-block',
     marginLeft: theme.margin / 2,
@@ -45,6 +48,13 @@ const styles = theme => ({
     backgroundPosition: 'center',
     verticalAlign: 'middle',
   },
+
+  [`@media screen and (min-width: ${theme.responsive.small + 1}px)`]: {
+    statsSecondLine: {
+      display: 'inline-block',
+      marginLeft: 10
+    }
+  }
 });
 
 function Project (props) {
@@ -56,6 +66,7 @@ function Project (props) {
     scale,
     date,
     lang,
+    at,
     header,
     description,
     image,
@@ -68,6 +79,7 @@ function Project (props) {
     : type === 'guide'
       ? 'book'
       : 'code-brackets';
+
   return (
     <ArwesProjectImproved
       animate
@@ -103,6 +115,15 @@ function Project (props) {
             {' '}
             {lang.toUpperCase()}
           </div>
+          <div className={classes.statsSecondLine}>
+            {!!at && (
+            <div className={classes.stat}>
+              <i className='mdi mdi-map-marker' />
+              {' '}
+              {at}
+            </div>
+            )}
+          </div>
         </Appear>
         {!!image && (
         <Appear
@@ -127,6 +148,7 @@ Project.propTypes = {
   image: PropTypes.string,
   scale: PropTypes.number,
   lang: PropTypes.string,
+  at: PropTypes.string
 };
 
 Project.defaultProps = {

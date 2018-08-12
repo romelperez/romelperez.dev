@@ -1,13 +1,11 @@
 import React from 'react';
-import Router from 'next/router';
 import * as arwes from 'arwes';
 import { withStyles, ThemeProvider, createTheme, Arwes } from 'arwes';
 import createSpectacleThemeScreen from 'spectacle/lib/themes/default/screen';
 import createSpectacleThemePrint from 'spectacle/lib/themes/default/print';
 
-import { projects, talks } from '../site/settings';
-import createAppTheme from '../site/createAppTheme';
-import withTemplate from '../site/withTemplate';
+import createAppTheme from '../../site/createAppTheme';
+import withTemplate from '../../site/withTemplate';
 
 let spectacle, Deck, Slide;
 
@@ -32,7 +30,7 @@ const styles = () => ({
   },
 });
 
-class Talks extends React.Component {
+class TalkBase extends React.Component {
 
   constructor () {
     super(...arguments);
@@ -49,25 +47,12 @@ class Talks extends React.Component {
     this.defineSpectacleTheme();
     this.importSpectacle();
 
-    const { talkKey } = this.props.url.query;
-    const project = projects.find(item => item.key === talkKey);
-    const talk = project && talks.find(item => item.id === project.talkId);
-
-    if (project && talk) {
-      this.setState({ animLvl1: true });
-    } else {
-      Router.push('/projects');
-    }
+    this.setState({ animLvl1: true });
   }
 
   render () {
-    const { talkKey } = this.props.url.query;
-    const { classes } = this.props;
-
+    const { classes, talk } = this.props;
     const { arwesTheme, spectacleTheme, animLvl1 } = this.state;
-
-    const project = projects.find(item => item.key === talkKey);
-    const talk = project && talks.find(item => item.id === project.talkId);
 
     return (
       <ThemeProvider theme={arwesTheme}>
@@ -239,4 +224,4 @@ class Talks extends React.Component {
   }
 }
 
-export default withTemplate(withStyles(styles)(Talks));
+export default withTemplate(withStyles(styles)(TalkBase));
