@@ -398,8 +398,8 @@
   },
   {
     "id": "edf6fbfe-3e05-4ec2-946b-c6d72cc60df0",
-    "name": "Arwes v1",
-    "description": "Arwes is a web framework to build user interfaces for web applications based on science fiction and cyberpunk styles guidelines, animations and sounds effects. The idea is to provide an user experience as if you were using futuristic out of a movie interfaces for your project.",
+    "name": "Arwes v1-alpha",
+    "description": "Arwes is a web framework to build user interfaces for web applications based on futuristic science fiction and cyberpunk styles, animations, and sounds effects. The idea is to let you create realistic futuristic user experiences in your projects. The concepts behind are opinionated and try to inspire advanced space technology and alien influence.",
     "date": "2018-02-17",
     "lang": "en",
     "type": "code",
