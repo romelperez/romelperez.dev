@@ -25,7 +25,8 @@ const styles = theme => ({
     textShadow: 'none',
     color: theme.color.primary.base,
     '& p': {
-      margin: theme.padding,
+      margin: 0,
+      padding: theme.padding,
     },
   },
   stats: {
