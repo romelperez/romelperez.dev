@@ -23,6 +23,10 @@ const styles = () => ({
     right: 0,
     bottom: 0,
     overflow: 'hidden',
+    '& ul li': {
+      display: 'flex',
+      textAlign: 'left',
+    },
   },
   codeBlock: {
     margin: 0,
@@ -146,7 +150,7 @@ class TalkBase extends React.Component {
         const SelectedElement = arwes[element];
         return (
           <SelectedElement key={key} {...props}>
-            {this.createElement(children)}
+            {this.createElement(children, `${key}C`)}
           </SelectedElement>
         );
       }
@@ -154,8 +158,8 @@ class TalkBase extends React.Component {
       // A built-in component.
       default: return React.createElement(
         element,
-        { key, ...props },
-        this.createElement(children)
+        { ...props, key },
+        this.createElement(children, `${key}C`)
       );
     }
   }
@@ -184,19 +188,19 @@ class TalkBase extends React.Component {
   defineSpectacleTheme () {
     const { theme } = this.props;
 
-    const fonts = {
+    const colors = {
       primary: theme.background.primary.level0,
       secondary: theme.color.primary.base,
       tertiary: theme.color.header.base,
-      quarternary: theme.color.primary.dark,
+      quaternary: theme.color.primary.dark,
     };
-    const colors = {
+    const fonts = {
       primary: theme.typography.fontFamily,
       secondary: theme.typography.headerFontFamily,
       tertiary: theme.code.fontFamily,
     };
     const spectacleTheme = {
-      screen: createSpectacleThemeScreen(fonts, colors),
+      screen: createSpectacleThemeScreen(colors, fonts),
       print: createSpectacleThemePrint(),
     };
 

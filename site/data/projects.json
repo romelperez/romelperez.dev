@@ -410,7 +410,7 @@
   {
     "id": "0bef74ea-23f9-43b4-9382-35aa44ea623c",
     "name": "Sirena Autocontrolada",
-    "description": "La Sirena Autocontrolada es un dispositivo electrónico controlado por un microcontrolador PIC 16F84A-4 que tiene como función gestionar las alertas realizadas con la sirena eléctrica en el plantel principal para los cambios en el horario definido en él.",
+    "description": "The Sirena Autocontrolada is an electronic device controlled by a microcontroller PIC 16F84A-4 which works as a manager for alerting about changes in the school schedule inside the school building.",
     "date": "2011-10-09",
     "lang": "es",
     "type": "code",
@@ -422,7 +422,7 @@
   {
     "id": "1345b40a-0c97-4220-9ae5-197b892b1784",
     "name": "Calculador Matemático",
-    "description": "Calculadora de funciones, vectores, triángulos matemáticos y ley de Ohm.",
+    "description": "Math function plotter, vector, trigonometry, and Ohm rule calculator.",
     "date": "2011-09-01",
     "lang": "es",
     "type": "code",
@@ -461,8 +461,8 @@
   },
   {
     "id": "8d218d6b-3c63-4af4-bcd2-ec1d987f27dd",
-    "name": "Cómo iniciar tu carrera en la programación con open source",
-    "description": "Comparto mi experiencia en la tecnología como desarrollador de software y cómo he podido hacer una carrera profesional principalmente con una cultura de contenidos abiertos.",
+    "name": "How to start your career in tech with open source",
+    "description": "I share my experience in tech as a Software Engineer and how I've been able to create a career mainly because of a culture of open source contents.",
     "date": "2018-06-08",
     "lang": "es",
     "type": "talk",
@@ -475,7 +475,7 @@
     "id": "dab16220-2d6c-436a-8b17-f216e9116000",
     "private": true,
     "name": "Testing en JavaScript con Jest",
-    "description": "TODO: To be defined",
+    "description": "Talk and walkthrough about software testing in web applications based in JavaScript with the Jest library. The tutorial is focused on unit testing using the methodology Test-Driven Development (TDD) on Node.js.",
     "date": "2018-08-29",
     "lang": "es",
     "type": "talk",

@@ -1,6 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import cx from 'classnames';
+import { rgba } from 'polished';
 import { withStyles, Words, Project as ArwesProject, Appear } from 'arwes';
 import arwesProjectStyles from 'arwes/lib/Project/styles';
 
@@ -47,6 +48,7 @@ const styles = theme => ({
     height: 300,
     backgroundSize: 'cover',
     backgroundPosition: 'center',
+    backgroundColor: rgba(theme.color.primary.dark, 0.25),
     verticalAlign: 'middle',
   },
 
