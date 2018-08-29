@@ -473,7 +473,6 @@
   },
   {
     "id": "dab16220-2d6c-436a-8b17-f216e9116000",
-    "private": true,
     "name": "Testing en JavaScript con Jest",
     "description": "Talk and walkthrough about software testing in web applications based in JavaScript with the Jest library. The tutorial is focused on unit testing using the methodology Test-Driven Development (TDD) on Node.js.",
     "date": "2018-08-29",
