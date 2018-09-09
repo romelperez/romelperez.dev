@@ -479,6 +479,7 @@
     "lang": "es",
     "type": "talk",
     "scale": 1,
-    "link": "/talks/testing-javascript-jest"
+    "link": "/talks/testing-javascript-jest",
+    "image": "https://firebasestorage.googleapis.com/v0/b/romelperez-qw74.appspot.com/o/projects%2Ftesting-javascript-with-jest-medellinjs.jpeg?alt=media&token=71fdc6aa-4f22-483b-af8f-46d1bec12718"
   }
 ]
