@@ -479,7 +479,19 @@
     "lang": "es",
     "type": "talk",
     "scale": 1,
+    "at": "MedellinJS",
     "link": "/talks/testing-javascript-jest",
     "image": "https://firebasestorage.googleapis.com/v0/b/romelperez-qw74.appspot.com/o/projects%2Ftesting-javascript-with-jest-medellinjs.jpeg?alt=media&token=71fdc6aa-4f22-483b-af8f-46d1bec12718"
+  },
+  {
+    "id": "14c9f884-ca9d-4f18-9166-f4ba6a28a7e3",
+    "name": "CSS in JS with JSS and React at MedellinJS",
+    "description": "Style scalable web applications with the CSS in JavaScript implementation JSS using ReactJS components.",
+    "date": "2018-09-19",
+    "lang": "en",
+    "type": "talk",
+    "scale": 1,
+    "at": "MedellinJS",
+    "link": "/talks/css-in-js-with-jss-and-react"
   }
 ]
