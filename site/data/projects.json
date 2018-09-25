@@ -488,10 +488,23 @@
     "name": "CSS in JS with JSS and React at MedellinJS",
     "description": "Style scalable web applications with the CSS in JavaScript implementation JSS using ReactJS components.",
     "date": "2018-09-19",
-    "lang": "en",
+    "lang": "es",
     "type": "talk",
     "scale": 1,
     "at": "MedellinJS",
-    "link": "/talks/css-in-js-with-jss-and-react"
+    "link": "/talks/css-in-js-with-jss-and-react",
+    "image": "https://firebasestorage.googleapis.com/v0/b/romelperez-qw74.appspot.com/o/projects%2Fmedellinjs-cssinjs-with-jss-react.jpg?alt=media&token=9b211840-064b-41b0-afa6-77c415607a39"
+  },
+  {
+    "id": "c7390e99-77fa-4273-b30f-b75837bc78fe",
+    "name": "CSS in JS with JSS and React at MedellinJS",
+    "description": "Talk about software testing in web applications based in JavaScript with the Jest library. The tutorial is focused on unit testing using the methodology Test-Driven Development (TDD) on Node.js.",
+    "date": "2018-09-20",
+    "lang": "es",
+    "type": "talk",
+    "scale": 1,
+    "at": "Universidad de Antioquia",
+    "link": "/talks/testing-javascript-jest",
+    "image": "https://firebasestorage.googleapis.com/v0/b/romelperez-qw74.appspot.com/o/projects%2Fudea-testing-in-javascript.jpg?alt=media&token=d4cb6fe4-ec33-4130-a8c4-4010c3049d14"
   }
 ]
