@@ -506,5 +506,16 @@
     "at": "Universidad de Antioquia",
     "link": "/talks/testing-javascript-jest",
     "image": "https://firebasestorage.googleapis.com/v0/b/romelperez-qw74.appspot.com/o/projects%2Fudea-testing-in-javascript.jpg?alt=media&token=d4cb6fe4-ec33-4130-a8c4-4010c3049d14"
+  },
+  {
+    "id": "b7204a86-2cc7-4114-8186-3410c535d29b",
+    "name": "JavaScript Animations",
+    "description": "Learn how to make the web come alive with animations, comparing the current most used technologies to animate and how JavaScript methodologies and tools can make our lifes easier.",
+    "date": "2018-10-09",
+    "lang": "es",
+    "type": "talk",
+    "scale": 1,
+    "at": "React Medellin",
+    "link": "/talks/javascript-animations"
   }
 ]
