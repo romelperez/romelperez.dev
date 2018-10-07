@@ -55,7 +55,7 @@ class TalkBase extends React.Component {
   }
 
   render () {
-    const { classes, talk } = this.props;
+    const { classes, talk, className, deckClassName, slideClassName } = this.props;
     const { arwesTheme, spectacleTheme, animLvl1 } = this.state;
 
     return (
@@ -64,13 +64,19 @@ class TalkBase extends React.Component {
           animate
           show={animLvl1 && !!talk}
           puffsProps={{ animate: false }}
+          className={className}
         >
           <div className={classes.root}>
             {animLvl1 && (
-            <Deck progress='bar' theme={spectacleTheme} {...talk.deck}>
+            <Deck
+              className={deckClassName}
+              progress='bar'
+              theme={spectacleTheme}
+              {...talk.deck}
+            >
 
               {(talk.slides || []).map((slide, index) => (
-              <Slide key={index} {...slide.props}>
+              <Slide key={index} className={slideClassName} {...slide.props}>
                 {(slide.children || []).map((child, index2) => (
                   this.createElement(child, `S${index}C${index2}`)
                 ))}
