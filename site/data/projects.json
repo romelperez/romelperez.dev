@@ -473,7 +473,7 @@
   },
   {
     "id": "dab16220-2d6c-436a-8b17-f216e9116000",
-    "name": "Testing en JavaScript con Jest",
+    "name": "Testing in JavaScript with Jest",
     "description": "Talk and walkthrough about software testing in web applications based in JavaScript with the Jest library. The tutorial is focused on unit testing using the methodology Test-Driven Development (TDD) on Node.js.",
     "date": "2018-08-29",
     "lang": "es",
@@ -497,7 +497,7 @@
   },
   {
     "id": "c7390e99-77fa-4273-b30f-b75837bc78fe",
-    "name": "CSS in JS with JSS and React at MedellinJS",
+    "name": "Introduction to Testing in JavaScript",
     "description": "Talk about software testing in web applications based in JavaScript with the Jest library. The tutorial is focused on unit testing using the methodology Test-Driven Development (TDD) on Node.js.",
     "date": "2018-09-20",
     "lang": "es",
@@ -516,6 +516,7 @@
     "type": "talk",
     "scale": 1,
     "at": "React Medellin",
-    "link": "/talks/javascript-animations"
+    "link": "/talks/javascript-animations",
+    "image": "https://firebasestorage.googleapis.com/v0/b/romelperez-qw74.appspot.com/o/projects%2Freact-medellin-javascript-animations.jpg?alt=media&token=e6e2a161-66aa-4265-a8c9-be19dad1626d"
   }
 ]
