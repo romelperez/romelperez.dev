@@ -56,7 +56,7 @@ const Footer = props => {
           <div className={classes.content}>
             <div className={classes.left}>
               <Link href='https://github.com/romelperez/romelperez.com/blob/master/LICENSE' target='license' onLink={onLink}>
-                <TextIcon show={anim.entered} icon='copyright'>2018 Romel Pérez</TextIcon>
+                <TextIcon show={anim.entered} icon='copyright'>2019 Romel Pérez</TextIcon>
               </Link>
             </div>
             <div className={classes.right}>
