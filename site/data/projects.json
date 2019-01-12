@@ -529,5 +529,15 @@
     "at": "React Medellin",
     "link": "/talks/javascript-animations",
     "image": "https://firebasestorage.googleapis.com/v0/b/romelperez-qw74.appspot.com/o/projects%2Freact-medellin-javascript-animations.jpg?alt=media&token=e6e2a161-66aa-4265-a8c9-be19dad1626d"
+  },
+  {
+    "id": "e84b6e0f-2e5b-45c7-a49a-a393e7c857af",
+    "name": "Kantrux",
+    "description": "Ultralight web UI library for building static components with JSX support.",
+    "date": "2018-12-15",
+    "lang": "en",
+    "type": "code",
+    "scale": 1,
+    "link": "https://github.com/romelperez/kantrux"
   }
 ]
