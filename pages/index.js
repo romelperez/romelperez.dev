@@ -153,7 +153,7 @@ class Index extends React.Component {
 
               <div className={classes.section}>
                 <Link className={classes.detail} href='https://www.linkedin.com/in/romelperez' target='linkedin' onLink={this.onLink}>
-                  <TextIcon className={classes.textIcon} show={anim.entered} icon='code-brackets'>Frontend Engineer</TextIcon>
+                  <TextIcon className={classes.textIcon} show={anim.entered} icon='code-brackets'>Web Engineer</TextIcon>
                 </Link>
                 <Link className={classes.detail} href='https://hugeinc.com' target='_blank' onLink={this.onLink}>
                   <TextIcon className={classes.textIcon} show={anim.entered} icon='briefcase-outline'>Huge</TextIcon>
