@@ -29,7 +29,7 @@ const styles = theme => ({
     margin: 'auto',
     padding: theme.padding,
     textAlign: 'center',
-    maxWidth: 700,
+    maxWidth: 580,
     '& h1': {
       margin: 0,
       paddingTop: 5,
@@ -145,9 +145,8 @@ class Index extends React.Component {
 
               <div className={classes.section}>
                 <p><Words animate show={anim.entered}>
-                  Software engineering autodidact. Enthusiast, JavaScript dev,
-                  Sci-Fi and nature fan. Making the world a better place through
-                  lines of code.
+                    Web Frontend Engineer. JavaScript, Sci-Fi, Nature, Yoga.
+                    Making the world a better place.
                 </Words></p>
               </div>
 
