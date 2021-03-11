@@ -55,12 +55,12 @@ const Footer = props => {
         <Row noMargin col s={12}>
           <div className={classes.content}>
             <div className={classes.left}>
-              <Link href='https://github.com/romelperez/romelperez.com/blob/master/LICENSE' target='license' onLink={onLink}>
-                <TextIcon show={anim.entered} icon='copyright'>2020 Romel Pérez</TextIcon>
+                <Link href='https://github.com/romelperez/romelperez.dev/blob/master/LICENSE' target='license' onLink={onLink}>
+                <TextIcon show={anim.entered} icon='copyright'>2021 Romel Pérez</TextIcon>
               </Link>
             </div>
             <div className={classes.right}>
-              <Link href='https://arwes.romelperez.com' target='arwes' onLink={onLink}>
+              <Link href='https://arwes.dev' target='arwes' onLink={onLink}>
                 <TextIcon show={anim.entered} icon='chemical-weapon'>Made with Arwes</TextIcon>
               </Link>
             </div>

@@ -146,7 +146,7 @@ class Index extends React.Component {
               <div className={classes.section}>
                 <p><Words animate show={anim.entered}>
                     Web Frontend Engineer. JavaScript, Sci-Fi, Nature, Yoga.
-                    Making the world a better place.
+                    Developing Epic User Experiences.
                 </Words></p>
               </div>
 
@@ -154,8 +154,8 @@ class Index extends React.Component {
                 <Link className={classes.detail} href='https://www.linkedin.com/in/romelperez' target='linkedin' onLink={this.onLink}>
                   <TextIcon className={classes.textIcon} show={anim.entered} icon='code-brackets'>Web Engineer</TextIcon>
                 </Link>
-                <Link className={classes.detail} href='https://hugeinc.com' target='_blank' onLink={this.onLink}>
-                  <TextIcon className={classes.textIcon} show={anim.entered} icon='briefcase-outline'>Huge</TextIcon>
+                <Link className={classes.detail} href='https://github.com/romelperez' target='_blank' onLink={this.onLink}>
+                  <TextIcon className={classes.textIcon} show={anim.entered} icon='briefcase-outline'>Open Source</TextIcon>
                 </Link>
                 <Link className={classes.detail} href='https://www.google.com.co/maps/place/Medellin' target='_blank' onLink={this.onLink}>
                   <TextIcon className={classes.textIcon} show={anim.entered} icon='map-marker-outline'>Medellin</TextIcon>
